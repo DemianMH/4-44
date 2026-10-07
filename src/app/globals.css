@@ -97,8 +97,62 @@ section[id] {
   animation: track-move 0.8s linear infinite;
 }
 
+/* Excavadora: cada articulación gira sobre su pivote (coordenadas del viewBox) */
+.arm {
+  transform-box: view-box;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.arm-boom {
+  transform-origin: 160px 112px;
+  animation-name: arm-boom;
+  animation-duration: 3.4s;
+}
+
+.arm-stick {
+  transform-origin: 262px 40px;
+  animation-name: arm-stick;
+  animation-duration: 2.6s;
+}
+
+.arm-bucket {
+  transform-origin: 296px 108px;
+  animation-name: arm-bucket;
+  animation-duration: 1.9s;
+}
+
+@keyframes arm-boom {
+  from {
+    transform: rotate(-6deg);
+  }
+  to {
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes arm-stick {
+  from {
+    transform: rotate(-14deg);
+  }
+  to {
+    transform: rotate(16deg);
+  }
+}
+
+@keyframes arm-bucket {
+  from {
+    transform: rotate(-22deg);
+  }
+  to {
+    transform: rotate(24deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .marquee-track,
+  .arm,
   .track-move {
     animation: none;
   }

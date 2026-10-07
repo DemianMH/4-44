@@ -1,13 +1,13 @@
 "use client";
 
 import { useMemo, useRef } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
 const FLOORS = 9;
 const FLOOR_H = 0.7;
 const SIZE = 3;
-const BUILD_START = 2.8; // segundos: tras el preloader
+const BUILD_START = 0.6; // segundos desde que se monta el canvas (carga diferida al entrar en vista)
 const BUILD_STEP = 0.42;
 const TOTAL_H = FLOORS * FLOOR_H;
 
@@ -36,9 +36,9 @@ function Floor({ index }: { index: number }) {
   useFrame((state) => {
     const g = ref.current;
     if (!g) return;
-    const k = ease(THREE.MathUtils.clamp((state.clock.elapsedTime - BUILD_START - index * BUILD_STEP) / 0.8, 0, 1));
+    const k = ease(THREE.MathUtils.clamp((state.clock.elapsedTime - BUILD_START - index * BUILD_STEP) / 0.9, 0, 1));
     g.visible = k > 0;
-    g.scale.y = Math.max(k, 0.0001);
+    g.position.y = index * FLOOR_H + (1 - k) * 3; // el piso desciende hasta su nivel, como izado por la grúa
   });
 
   return (
@@ -96,19 +96,19 @@ function Crane() {
   });
 
   return (
-    <group position={[SIZE / 2 + 1.1, 0, -0.4]}>
+    <group position={[SIZE / 2 + 0.7, 0, -0.4]}>
       <EdgeBox w={0.28} h={mastH} d={0.28} position={[0, mastH / 2, 0]} color={ORANGE} opacity={0.95} />
       <lineSegments geometry={lattice}>
         <lineBasicMaterial color={ORANGE} transparent opacity={0.7} />
       </lineSegments>
       <group ref={jib} position={[0, mastH, 0]}>
-        <EdgeBox w={5} h={0.2} d={0.2} position={[1.2, 0, 0]} color={ORANGE} opacity={1} />
-        <mesh position={[-1.2, -0.05, 0]}>
+        <EdgeBox w={4} h={0.2} d={0.2} position={[0.9, 0, 0]} color={ORANGE} opacity={1} />
+        <mesh position={[-1.1, -0.05, 0]}>
           <boxGeometry args={[0.6, 0.4, 0.4]} />
           <meshBasicMaterial color={GRAPHITE} />
         </mesh>
         <EdgeBox w={0.2} h={0.5} d={0.2} position={[0, 0.3, 0]} color={ORANGE} opacity={1} />
-        <group position={[2.3, -0.1, 0]}>
+        <group position={[1.9, -0.1, 0]}>
           <mesh ref={cable}>
             <cylinderGeometry args={[0.012, 0.012, 1, 6]} />
             <meshBasicMaterial color={GRAPHITE} />
@@ -158,8 +158,6 @@ function Dust() {
 
 function Site() {
   const group = useRef<THREE.Group>(null);
-  const width = useThree((s) => s.size.width);
-  const wide = width > 900;
 
   useFrame((state, dt) => {
     const g = group.current;
@@ -171,7 +169,7 @@ function Site() {
   });
 
   return (
-    <group ref={group} position={[wide ? 2.6 : 0, -TOTAL_H / 2 - 0.4, 0]} scale={wide ? 1 : 0.85}>
+    <group ref={group} position={[-1.3, -TOTAL_H / 2 - 0.2, 0]}>
       <gridHelper args={[14, 28, GRAPHITE, GRAPHITE]} position={[0, -0.06, 0]}>
         <meshBasicMaterial attach="material" transparent opacity={0.15} />
       </gridHelper>
@@ -187,7 +185,7 @@ export default function Scene() {
   return (
     <Canvas
       dpr={[1, 1.75]}
-      camera={{ position: [0, 1.8, 17.5], fov: 40 }}
+      camera={{ position: [0, 1.6, 17], fov: 40 }}
       gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
       aria-hidden
     >

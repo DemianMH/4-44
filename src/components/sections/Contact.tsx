@@ -1,25 +1,27 @@
+import Image from "next/image";
+import { R } from "@/assets/images";
 import { SITE } from "@/lib/site";
 import { ContactForm } from "../ContactForm";
 import { Logo } from "../Logo";
 import { Magnetic } from "../Magnetic";
-import { EYEBROW, H2, PAD, WRAP } from "./styles";
+import { H2, WRAP } from "./styles";
 
 export function Contact() {
   return (
-    <section id="contacto" className={`bg-paper ${PAD}`}>
-      <div className={`${WRAP} grid grid-cols-12 gap-x-4 gap-y-16`}>
-        <div className="col-span-12 md:col-span-5">
-          <p className={EYEBROW}>Contacto</p>
-          <h2 className={`${H2} mt-6`}>
-            ¿Construimos
-            <br />
-            <span className="text-orange-strong">juntos?</span>
-          </h2>
-          <p className="mt-8 max-w-[40ch] text-base leading-relaxed text-graphite">
-            Cuéntanos qué quieres construir, rentar o supervisar. Respondemos con una propuesta clara.
-          </p>
+    <section id="contacto" className="relative bg-ink text-white">
+      <div className="grid lg:grid-cols-2">
+        <div className="relative min-h-[60svh] overflow-hidden">
+          <Image src={R.salaB} alt="Sala del desarrollo con luz cálida" fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" placeholder="blur" />
+          <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-ink/10" />
+          <div className="relative flex h-full min-h-[60svh] flex-col justify-end p-6 md:p-12">
+            <h2 className={`${H2} max-w-[12ch]`}>
+              Tu nuevo hogar <span className="text-orange">empieza aquí.</span>
+            </h2>
+          </div>
         </div>
-        <div className="col-span-12 border border-[var(--line)] bg-white p-6 md:col-span-6 md:col-start-7 md:p-10">
+
+        <div className="bg-white p-6 text-ink md:p-14">
+          <p className="mb-8 text-[12px] font-bold uppercase tracking-[0.24em] text-orange-ink">Contacto</p>
           <ContactForm />
         </div>
       </div>

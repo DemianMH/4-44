@@ -7,12 +7,15 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Constructora 4:44 | Desarrollo y construcción en Guadalajara",
+    default: "Constructora e Inmobiliaria 4:44 | Casas y departamentos en Guadalajara",
     template: "%s | Constructora 4:44",
   },
   description: SITE.description,
   keywords: [
     "constructora en Guadalajara",
+    "inmobiliaria Guadalajara",
+    "departamentos en venta Guadalajara",
+    "casas en venta Zapopan",
     "desarrollo inmobiliario Guadalajara",
     "construcción de casas Guadalajara",
     "renta de maquinaria Guadalajara",
@@ -40,7 +43,7 @@ export const viewport: Viewport = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "GeneralContractor",
+  "@type": ["GeneralContractor", "RealEstateAgent"],
   name: SITE.name,
   alternateName: "Constructora 444",
   url: SITE.url,

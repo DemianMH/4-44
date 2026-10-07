@@ -1,4 +1,4 @@
-const ITEMS = ["Casas residenciales", "Supervisión de obra", "4:44 Maquinaria", "Crowdfunding inmobiliario", "Guadalajara, Jalisco"];
+const ITEMS = ["Casas y departamentos", "Desarrollo y construcción", "Supervisión de obra", "4:44 Maquinaria", "Crowdfunding inmobiliario"];
 
 /** Cinta de obra: franja de señalización + letrero deslizante. */
 export function Marquee() {

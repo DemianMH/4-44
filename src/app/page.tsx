@@ -1,14 +1,16 @@
-import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { Marquee } from "@/components/Marquee";
 import { Preloader } from "@/components/Preloader";
-import { ScrollProgress } from "@/components/ScrollProgress";
+import { SiteChrome } from "@/components/SiteChrome";
+import { Constructora } from "@/components/sections/Constructora";
 import { Contact, Footer } from "@/components/sections/Contact";
+import { Desarrollo } from "@/components/sections/Desarrollo";
+import { DiaNoche } from "@/components/sections/DiaNoche";
 import { Faq } from "@/components/sections/Faq";
 import { Machinery } from "@/components/sections/Machinery";
-import { Manifesto } from "@/components/sections/Manifesto";
-import { Process } from "@/components/sections/Process";
-import { Projects } from "@/components/sections/Projects";
-import { Services } from "@/components/sections/Services";
+import { Plantas } from "@/components/sections/Plantas";
+import { Proyectos } from "@/components/sections/Proyectos";
+import { Terraza } from "@/components/sections/Terraza";
 import { FAQ } from "@/lib/site";
 
 const faqLd = {
@@ -26,15 +28,17 @@ export default function Home() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <Preloader />
-      <Header />
-      <ScrollProgress />
+      <SiteChrome />
       <main>
         <Hero />
-        <Manifesto />
-        <Services />
-        <Process />
+        <Marquee />
+        <Desarrollo />
+        <DiaNoche />
+        <Plantas />
+        <Terraza />
+        <Constructora />
         <Machinery />
-        <Projects />
+        <Proyectos />
         <Faq />
         <Contact />
       </main>

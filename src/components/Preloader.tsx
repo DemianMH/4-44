@@ -80,21 +80,30 @@ export function Preloader() {
                 transition={{ duration: 1.8, delay: 0.3, ease: EASE }}
               />
               <motion.path
-                d="M120 30H236M120 30L202 12L236 30M226 30V70"
+                d="M120 30H236M120 30L202 12L236 30"
                 stroke="#464a4b"
                 strokeWidth="2"
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
                 transition={{ duration: 1.2, delay: 1.5, ease: EASE }}
               />
+              <motion.line
+                x1="226"
+                x2="226"
+                y1="30"
+                stroke="#464a4b"
+                strokeWidth="2"
+                initial={{ y2: 30, opacity: 0 }}
+                animate={{ y2: [70, 130, 70], opacity: 1 }}
+                transition={{ duration: 2.4, delay: 1.6, ease: "easeInOut" }}
+              />
               <motion.rect
                 x="221"
-                y="70"
                 width="10"
                 height="9"
                 fill="#f57e25"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: [0, 60, 0] }}
+                initial={{ y: 30, opacity: 0 }}
+                animate={{ y: [70, 130, 70], opacity: 1 }}
                 transition={{ duration: 2.4, delay: 1.6, ease: "easeInOut" }}
               />
             </g>
