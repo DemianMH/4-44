@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "@fontsource-variable/montserrat";
 import "@fontsource-variable/inter";
 import { SITE } from "@/lib/site";
+import { SmoothScroll } from "@/components/SmoothScroll";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -39,6 +40,7 @@ export const viewport: Viewport = {
   themeColor: "#ffffff",
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
 };
 
 const jsonLd = {
@@ -60,6 +62,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="es-MX" className="antialiased">
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <SmoothScroll />
         {children}
       </body>
     </html>

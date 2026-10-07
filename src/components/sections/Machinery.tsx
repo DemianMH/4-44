@@ -36,17 +36,17 @@ function Excavator() {
 
 export function Machinery() {
   return (
-    <section id="maquinaria" className={`relative overflow-hidden bg-graphite text-white ${PAD}`}>
+    <section id="maquinaria" data-tone="dark" className={`relative overflow-hidden bg-graphite text-white ${PAD}`}>
       <div aria-hidden className="hazard absolute inset-x-0 top-0 h-2" />
-      <div className={`${WRAP} grid grid-cols-12 items-center gap-x-8 gap-y-14`}>
+      <div className={`${WRAP} grid grid-cols-12 items-center gap-x-0 gap-y-14 lg:gap-x-8`}>
         <div className="col-span-12 lg:col-span-5">
-          <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-orange">4:44 Maquinaria</p>
+          <p className="text-[0.75rem] font-bold uppercase tracking-[0.24em] text-orange">4:44 Maquinaria</p>
           <h2 className={`${H2} mt-6`}>
             Renta de equipo <span className="text-orange">para tu obra.</span>
           </h2>
           <ul className="mt-8 flex flex-wrap gap-2" aria-label="Periodos de renta">
             {RENTAL_TERMS.map((t) => (
-              <li key={t} className="border-2 border-white/60 px-4 py-2 text-[12px] font-bold uppercase tracking-[0.18em] transition-colors duration-500 hover:border-orange hover:bg-orange hover:text-ink">
+              <li key={t} className="border-2 border-white/60 px-4 py-2 text-[0.75rem] font-bold uppercase tracking-[0.18em] transition-colors duration-500 hover:border-orange hover:bg-orange hover:text-ink">
                 Por {t.toLowerCase()}
               </li>
             ))}
@@ -59,7 +59,7 @@ export function Machinery() {
               </li>
             ))}
           </ul>
-          <a href="#contacto" className="mt-10 inline-block bg-orange px-8 py-4 text-[13px] font-bold uppercase tracking-[0.16em] text-ink transition-colors duration-500 hover:bg-white">
+          <a href="#contacto" className="mt-10 inline-block bg-orange px-8 py-4 text-[0.8125rem] font-bold uppercase tracking-[0.16em] text-ink transition-colors duration-500 hover:bg-white">
             Cotizar renta →
           </a>
         </div>

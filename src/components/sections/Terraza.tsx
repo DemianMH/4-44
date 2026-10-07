@@ -13,13 +13,13 @@ export function Terraza() {
   const cardY = useTransform(scrollYProgress, [0, 1], [60, -60]);
 
   return (
-    <section ref={ref} aria-label="Terraza en azotea" className="relative h-[90svh] overflow-hidden bg-ink text-white">
+    <section ref={ref} aria-label="Terraza en azotea" data-tone="dark" className="relative h-[90svh] overflow-hidden bg-ink text-white">
       <motion.div className="absolute -inset-y-[12%] inset-x-0" style={{ y }}>
-        <Image src={R.terrazaB} alt="Terraza en azotea con pérgola, sillones y sombrilla al atardecer" fill sizes="100vw" className="object-cover" placeholder="blur" />
+        <Image src={R.terrazaB} alt="Terraza en azotea con pérgola, sillones y sombrilla al atardecer" fill sizes="100vw" quality={90} className="object-cover" placeholder="blur" />
       </motion.div>
       <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/10 to-ink/30" />
 
-      <div className="relative mx-auto flex h-full max-w-[1600px] items-end justify-between gap-8 px-5 pb-14 md:px-10">
+      <div className="relative mx-auto flex h-full max-w-[100rem] items-end justify-between gap-8 px-5 pb-14 md:px-10">
         <h2 className="font-display text-[clamp(2.2rem,6vw,5.6rem)] font-extrabold leading-[0.98] tracking-[-0.04em]">
           Terraza
           <br />

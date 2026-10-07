@@ -9,7 +9,7 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 
 export function Proyectos() {
   return (
-    <section id="proyectos" className={`bg-white ${PAD}`}>
+    <section id="proyectos" data-tone="light" className={`bg-white ${PAD}`}>
       <div className={WRAP}>
         <p className={EYEBROW}>Portafolio / {String(PROJECTS.length).padStart(2, "0")}</p>
         <h2 className={`${H2} mt-6`}>
@@ -36,7 +36,7 @@ export function Proyectos() {
                   placeholder="blur"
                 />
                 <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/10 to-transparent" />
-                <span className="absolute left-3 top-3 bg-white px-2 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-ink">{p.type}</span>
+                <span className="absolute left-3 top-3 bg-white px-2 py-1 text-[0.6875rem] font-bold uppercase tracking-[0.16em] text-ink">{p.type}</span>
                 <div className="absolute inset-x-0 bottom-0 p-4 text-white">
                   <h3 className="font-display text-lg font-extrabold leading-tight md:text-xl">{p.name}</h3>
                   <span aria-hidden className="mt-3 block h-0.5 w-8 bg-orange transition-all duration-700 [transition-timing-function:var(--ease)] group-hover:w-full" />

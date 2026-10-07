@@ -38,19 +38,19 @@ export function ContactForm() {
           No llenar <input name="bot-field" tabIndex={-1} autoComplete="off" />
         </label>
       </p>
-      <label className="grid gap-1 text-[11px] font-bold uppercase tracking-[0.18em] text-graphite">
+      <label className="grid gap-1 text-[0.6875rem] font-bold uppercase tracking-[0.18em] text-graphite">
         Nombre
         <input className={FIELD} name="nombre" required autoComplete="name" placeholder="Tu nombre" />
       </label>
-      <label className="grid gap-1 text-[11px] font-bold uppercase tracking-[0.18em] text-graphite">
+      <label className="grid gap-1 text-[0.6875rem] font-bold uppercase tracking-[0.18em] text-graphite">
         Correo
         <input className={FIELD} name="correo" type="email" required autoComplete="email" placeholder="correo@ejemplo.com" />
       </label>
-      <label className="grid gap-1 text-[11px] font-bold uppercase tracking-[0.18em] text-graphite">
+      <label className="grid gap-1 text-[0.6875rem] font-bold uppercase tracking-[0.18em] text-graphite">
         Teléfono
         <input className={FIELD} name="telefono" type="tel" autoComplete="tel" placeholder="33 0000 0000" />
       </label>
-      <label className="grid gap-1 text-[11px] font-bold uppercase tracking-[0.18em] text-graphite">
+      <label className="grid gap-1 text-[0.6875rem] font-bold uppercase tracking-[0.18em] text-graphite">
         Interés
         <select className={`${FIELD} bg-white`} name="interes" defaultValue="Casa residencial">
           <option>Casa residencial</option>
@@ -60,7 +60,7 @@ export function ContactForm() {
           <option>Otro</option>
         </select>
       </label>
-      <label className="grid gap-1 text-[11px] font-bold uppercase tracking-[0.18em] text-graphite">
+      <label className="grid gap-1 text-[0.6875rem] font-bold uppercase tracking-[0.18em] text-graphite">
         Mensaje
         <textarea className={FIELD} name="mensaje" rows={4} required placeholder="Cuéntanos de tu proyecto" />
       </label>
@@ -69,7 +69,7 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={status === "sending"}
-            className="bg-orange px-8 py-4 text-[13px] font-bold uppercase tracking-[0.16em] text-ink transition-colors duration-500 [transition-timing-function:var(--ease)] hover:bg-ink hover:text-white disabled:opacity-60"
+            className="bg-orange px-8 py-4 text-[0.8125rem] font-bold uppercase tracking-[0.16em] text-ink transition-colors duration-500 [transition-timing-function:var(--ease)] hover:bg-ink hover:text-white disabled:opacity-60"
           >
             {status === "sending" ? "Enviando…" : "Enviar mensaje"}
           </button>

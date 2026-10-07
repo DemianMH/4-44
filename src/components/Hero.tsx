@@ -46,24 +46,24 @@ export function Hero() {
   };
 
   return (
-    <section ref={ref} id="top" onPointerMove={onMove} className="relative min-h-svh overflow-hidden bg-ink text-white">
+    <section ref={ref} id="top" data-tone="dark" onPointerMove={onMove} className="relative min-h-svh overflow-hidden bg-ink text-white">
       {/* Render de fachada con parallax de scroll (capa externa) y de mouse (capa interna) */}
       <motion.div className="absolute -inset-[7%]" style={{ y: imgY }} aria-hidden>
         <motion.div className="relative h-full w-full" style={{ x: bgX, y: bgY }} initial={{ scale: 1.18 }} animate={{ scale: 1 }} transition={{ duration: 3, delay: 2.2, ease: EASE }}>
-          <Image src={R.fachadaNoche} alt="" fill priority sizes="100vw" quality={78} className="object-cover" placeholder="blur" />
+          <Image src={R.fachadaNoche} alt="" fill priority sizes="100vw" quality={90} className="object-cover object-[62%_50%] md:object-center" placeholder="blur" />
         </motion.div>
       </motion.div>
       <div aria-hidden className="absolute inset-0 bg-[linear-gradient(90deg,rgba(29,32,33,0.7)_0%,rgba(29,32,33,0.4)_45%,rgba(29,32,33,0.04)_100%)]" />
       <div aria-hidden className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-ink/90 to-transparent" />
 
-      <motion.div className="relative mx-auto flex min-h-svh max-w-[1600px] flex-col justify-end px-5 pb-10 pt-32 md:px-10" style={{ y: textY, opacity: fade }}>
+      <motion.div className="relative mx-auto flex min-h-svh max-w-[100rem] flex-col justify-end px-5 pb-10 pt-32 md:px-10" style={{ y: textY, opacity: fade }}>
         <div className="grid grid-cols-12 items-end gap-x-4">
           <div className="col-span-12 lg:col-span-8">
-            <motion.p {...rise(0)} className="mb-7 flex items-center gap-4 text-[12px] font-bold uppercase tracking-[0.24em] text-orange">
+            <motion.p {...rise(0)} className="mb-7 flex items-center gap-4 text-[0.75rem] font-bold uppercase tracking-[0.24em] text-orange">
               <span className="h-0.5 w-12 bg-orange" /> Inmobiliaria y constructora · Guadalajara
             </motion.p>
 
-            <h1 className="font-display text-[clamp(2.6rem,7.6vw,7.4rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">
+            <h1 className="font-display text-[clamp(2.4rem,min(7.6vw,13svh),7.4rem)] font-extrabold leading-[0.95] tracking-[-0.04em]">
               {WORDS.map((w, i) => (
                 <span key={w} className="block overflow-hidden pb-[0.1em]">
                   <motion.span
@@ -83,7 +83,7 @@ export function Hero() {
               <Magnetic>
                 <a
                   href="#desarrollo"
-                  className="group inline-flex items-center gap-3 bg-orange px-8 py-4 text-[13px] font-bold uppercase tracking-[0.16em] text-ink transition-colors duration-500 [transition-timing-function:var(--ease)] hover:bg-white"
+                  className="group inline-flex items-center gap-3 bg-orange px-8 py-4 text-[0.8125rem] font-bold uppercase tracking-[0.16em] text-ink transition-colors duration-500 [transition-timing-function:var(--ease)] hover:bg-white"
                 >
                   Ver el desarrollo
                   <span aria-hidden className="transition-transform duration-500 [transition-timing-function:var(--ease)] group-hover:translate-x-1">
@@ -94,7 +94,7 @@ export function Hero() {
               <Magnetic>
                 <a
                   href="#contacto"
-                  className="inline-flex border-2 border-white px-8 py-[14px] text-[13px] font-bold uppercase tracking-[0.16em] text-white transition-colors duration-500 [transition-timing-function:var(--ease)] hover:bg-white hover:text-ink"
+                  className="inline-flex border-2 border-white px-8 py-[14px] text-[0.8125rem] font-bold uppercase tracking-[0.16em] text-white transition-colors duration-500 [transition-timing-function:var(--ease)] hover:bg-white hover:text-ink"
                 >
                   Cotizar
                 </a>
@@ -111,7 +111,7 @@ export function Hero() {
               className="relative block aspect-[4/3] overflow-hidden border border-white/30 shadow-[0_40px_80px_-30px_rgba(0,0,0,0.8)]"
             >
               <Image src={R.terrazaA} alt="Terraza en azotea del nuevo desarrollo" fill sizes="30vw" className="object-cover" placeholder="blur" />
-              <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 to-transparent p-4 text-[11px] font-bold uppercase tracking-[0.2em]">
+              <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 to-transparent p-4 text-[0.6875rem] font-bold uppercase tracking-[0.2em]">
                 Nuevo desarrollo · Terraza
               </span>
             </motion.a>
@@ -125,11 +125,11 @@ export function Hero() {
                 <dd className="font-display text-3xl font-extrabold">
                   <CountUp to={s.to} />
                 </dd>
-                <dt className="mt-1 text-[10px] font-bold uppercase tracking-[0.2em] text-white/80">{s.label}</dt>
+                <dt className="mt-1 text-[0.6875rem] font-bold uppercase tracking-[0.2em] text-white/80">{s.label}</dt>
               </div>
             ))}
           </dl>
-          <a href="#desarrollo" aria-label="Desliza para ver más" className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-white/90">
+          <a href="#desarrollo" aria-label="Desliza para ver más" className="flex items-center gap-3 text-[0.6875rem] font-bold uppercase tracking-[0.24em] text-white/90">
             Desliza
             <span className="relative block h-10 w-px overflow-hidden bg-white/30">
               <motion.span className="absolute inset-x-0 top-0 h-1/2 bg-orange" animate={{ y: ["-100%", "200%"] }} transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }} />

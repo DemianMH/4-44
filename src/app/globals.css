@@ -29,6 +29,12 @@
 html {
   background: var(--white);
   color-scheme: light;
+  /* 16px hasta 1920px de ancho; en 2K/4K todo crece proporcionalmente */
+  font-size: clamp(16px, 0.8333vw, 44px);
+  -webkit-text-size-adjust: 100%;
+}
+
+html:not(.lenis) {
   scroll-behavior: smooth;
 }
 
@@ -40,7 +46,7 @@ body {
 }
 
 section[id] {
-  scroll-margin-top: 4rem;
+  scroll-margin-top: 0;
 }
 
 ::selection {

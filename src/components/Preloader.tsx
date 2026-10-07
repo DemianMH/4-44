@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, animate, motion } from "framer-motion";
+import { lockScroll } from "@/lib/scroll";
 import { Logo } from "./Logo";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -14,7 +15,7 @@ export function Preloader() {
   const [pct, setPct] = useState(0);
 
   useEffect(() => {
-    document.documentElement.style.overflow = "hidden";
+    lockScroll(true);
     const counter = animate(0, 100, {
       duration: 2.6,
       ease: "easeInOut",
@@ -22,12 +23,12 @@ export function Preloader() {
     });
     const t = window.setTimeout(() => {
       setVisible(false);
-      document.documentElement.style.overflow = "";
+      lockScroll(false);
     }, DURATION_MS);
     return () => {
       counter.stop();
       window.clearTimeout(t);
-      document.documentElement.style.overflow = "";
+      lockScroll(false);
     };
   }, []);
 
@@ -117,7 +118,7 @@ export function Preloader() {
             >
               <Logo height={46} />
             </motion.div>
-            <div className="flex w-64 items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-graphite">
+            <div className="flex w-64 items-center gap-3 text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-graphite">
               <span>Avance de obra</span>
               <span className="ml-auto tabular-nums text-orange-ink">{String(pct).padStart(3, "0")}%</span>
             </div>

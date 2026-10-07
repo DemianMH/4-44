@@ -4,12 +4,12 @@ const ITEMS = ["Casas y departamentos", "Desarrollo y construcción", "Supervisi
 export function Marquee() {
   const row = ITEMS.map((t) => (
     <span key={t} className="flex items-center gap-8 px-4">
-      <span className="text-[13px] font-bold uppercase tracking-[0.22em] text-white">{t}</span>
+      <span className="text-[0.8125rem] font-bold uppercase tracking-[0.22em] text-white">{t}</span>
       <span aria-hidden className="h-2.5 w-2.5 rotate-45 bg-orange" />
     </span>
   ));
   return (
-    <div className="relative z-10" aria-hidden>
+    <div className="relative z-10" data-tone="dark" aria-hidden>
       <div className="hazard h-2" />
       <div className="overflow-hidden bg-ink py-4">
         <div className="marquee-track flex w-max whitespace-nowrap">

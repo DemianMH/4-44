@@ -184,7 +184,7 @@ function Site() {
 export default function Scene() {
   return (
     <Canvas
-      dpr={[1, 1.75]}
+      dpr={[1, 1.5]}
       camera={{ position: [0, 1.6, 17], fov: 40 }}
       gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
       aria-hidden

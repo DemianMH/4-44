@@ -40,11 +40,11 @@ export function Desarrollo() {
   const inner = useTransform(scrollYProgress, [0, 1], ["-4%", "4%"]);
 
   return (
-    <section ref={section} id="desarrollo" className="relative bg-ink text-white" style={{ height: `calc(100svh + ${dist}px)` }}>
+    <section ref={section} id="desarrollo" data-tone="dark" className="relative bg-ink text-white" style={{ height: `calc(100svh + ${dist}px)` }}>
       <div className="sticky top-0 flex h-svh flex-col justify-center overflow-hidden">
         <motion.div ref={track} style={{ x }} className="flex w-max items-center gap-[4vw] pl-[6vw] pr-[10vw] will-change-transform">
           <div className="w-[82vw] shrink-0 md:w-[34vw]">
-            <p className="text-[12px] font-bold uppercase tracking-[0.24em] text-orange">Inmobiliaria · Nuevo desarrollo</p>
+            <p className="text-[0.75rem] font-bold uppercase tracking-[0.24em] text-orange">Inmobiliaria · Nuevo desarrollo</p>
             <h2 className="mt-6 font-display text-[clamp(2.2rem,5vw,4.6rem)] font-extrabold leading-[1.02] tracking-[-0.035em]">
               Departamentos para <span className="text-orange">vivir bien.</span>
             </h2>

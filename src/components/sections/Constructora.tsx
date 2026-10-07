@@ -39,11 +39,11 @@ export function Constructora() {
   const near = useInView(box, { once: true, margin: "300px" });
 
   return (
-    <section id="constructora" className={`bg-blueprint bg-paper ${PAD}`}>
-      <div className={`${WRAP} grid grid-cols-12 items-center gap-x-8 gap-y-14`}>
+    <section id="constructora" data-tone="light" className={`bg-blueprint bg-paper ${PAD}`}>
+      <div className={`${WRAP} grid grid-cols-12 items-center gap-x-0 gap-y-14 lg:gap-x-8`}>
         <div ref={box} className="relative col-span-12 aspect-[5/6] w-full overflow-hidden border border-[var(--line)] bg-white/70 lg:col-span-6">
           {near && <Scene />}
-          <span className="pointer-events-none absolute bottom-4 left-4 text-[10px] font-bold uppercase tracking-[0.2em] text-graphite">Obra en curso · 3D</span>
+          <span className="pointer-events-none absolute bottom-4 left-4 text-[0.6875rem] font-bold uppercase tracking-[0.2em] text-graphite">Obra en curso · 3D</span>
         </div>
 
         <div className="col-span-12 lg:col-span-5 lg:col-start-8">

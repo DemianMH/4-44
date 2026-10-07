@@ -55,8 +55,8 @@ export function Plantas() {
   const [i, setI] = useState(0);
 
   return (
-    <section id="plantas" className={`bg-blueprint bg-paper ${PAD}`}>
-      <div className={`${WRAP} grid grid-cols-12 items-center gap-x-6 gap-y-12`}>
+    <section id="plantas" data-tone="light" className={`bg-blueprint bg-paper ${PAD}`}>
+      <div className={`${WRAP} grid grid-cols-12 items-center gap-x-0 gap-y-12 lg:gap-x-6`}>
         <div className="col-span-12 lg:col-span-5">
           <p className={EYEBROW}>Plantas</p>
           <h2 className={`${H2} mt-6`}>
@@ -74,7 +74,7 @@ export function Plantas() {
                 }`}
               >
                 <span className={`font-display text-2xl font-extrabold transition-colors duration-500 lg:text-4xl ${i === idx ? "text-orange lg:text-orange-strong" : "text-graphite/50"}`}>{p.id}</span>
-                <span className="text-[12px] font-bold uppercase tracking-[0.18em]">{p.name}</span>
+                <span className="text-[0.75rem] font-bold uppercase tracking-[0.18em]">{p.name}</span>
                 <span aria-hidden className={`ml-auto hidden h-0.5 bg-orange transition-all duration-700 lg:block ${i === idx ? "w-12" : "w-0"}`} />
               </button>
             ))}

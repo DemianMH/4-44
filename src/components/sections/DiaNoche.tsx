@@ -15,13 +15,13 @@ export function DiaNoche() {
   const scale = useTransform(scrollYProgress, [0, 1], [1.12, 1]);
 
   return (
-    <section ref={ref} aria-label="La fachada de día y de noche" className="relative h-[240svh] bg-ink">
+    <section ref={ref} aria-label="La fachada de día y de noche" data-tone="dark" className="relative h-[240svh] bg-ink">
       <div className="sticky top-0 h-svh overflow-hidden">
         <motion.div className="absolute inset-0" style={{ scale }}>
-          <Image src={R.fachadaDia} alt="Fachada de ladrillo del desarrollo, de día" fill sizes="100vw" className="object-cover" placeholder="blur" />
+          <Image src={R.fachadaDia} alt="Fachada de ladrillo del desarrollo, de día" fill sizes="100vw" quality={90} className="object-cover" placeholder="blur" />
         </motion.div>
         <motion.div className="absolute inset-0" style={{ clipPath: clip, scale }}>
-          <Image src={R.fachadaNoche} alt="" fill sizes="100vw" className="object-cover" placeholder="blur" aria-hidden />
+          <Image src={R.fachadaNoche} alt="" fill sizes="100vw" quality={90} className="object-cover" placeholder="blur" aria-hidden />
         </motion.div>
         <motion.div aria-hidden className="absolute inset-y-0 w-px bg-white shadow-[0_0_24px_4px_rgba(245,126,37,0.8)]" style={{ left: edge }} />
 
