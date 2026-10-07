@@ -6,7 +6,7 @@ import { Magnetic } from "./Magnetic";
 type Status = "idle" | "sending" | "ok" | "error";
 
 const FIELD =
-  "w-full border-b border-limestone/40 bg-transparent py-3 text-sm text-limestone placeholder:text-dim focus:border-corten focus:outline-none";
+  "w-full border-b-2 border-graphite/40 bg-transparent py-3 text-sm text-ink placeholder:text-graphite/60 transition-colors focus:border-orange focus:outline-none";
 
 /** Formulario compatible con Netlify Forms (declaración estática en public/__forms.html). */
 export function ContactForm() {
@@ -38,21 +38,21 @@ export function ContactForm() {
           No llenar <input name="bot-field" tabIndex={-1} autoComplete="off" />
         </label>
       </p>
-      <label className="grid gap-1 text-[11px] uppercase tracking-[0.22em] text-dim">
+      <label className="grid gap-1 text-[11px] font-bold uppercase tracking-[0.18em] text-graphite">
         Nombre
         <input className={FIELD} name="nombre" required autoComplete="name" placeholder="Tu nombre" />
       </label>
-      <label className="grid gap-1 text-[11px] uppercase tracking-[0.22em] text-dim">
+      <label className="grid gap-1 text-[11px] font-bold uppercase tracking-[0.18em] text-graphite">
         Correo
         <input className={FIELD} name="correo" type="email" required autoComplete="email" placeholder="correo@ejemplo.com" />
       </label>
-      <label className="grid gap-1 text-[11px] uppercase tracking-[0.22em] text-dim">
+      <label className="grid gap-1 text-[11px] font-bold uppercase tracking-[0.18em] text-graphite">
         Teléfono
         <input className={FIELD} name="telefono" type="tel" autoComplete="tel" placeholder="33 0000 0000" />
       </label>
-      <label className="grid gap-1 text-[11px] uppercase tracking-[0.22em] text-dim">
+      <label className="grid gap-1 text-[11px] font-bold uppercase tracking-[0.18em] text-graphite">
         Interés
-        <select className={`${FIELD} bg-concrete`} name="interes" defaultValue="Casa residencial">
+        <select className={`${FIELD} bg-white`} name="interes" defaultValue="Casa residencial">
           <option>Casa residencial</option>
           <option>Supervisión de proyecto</option>
           <option>Renta de maquinaria</option>
@@ -60,7 +60,7 @@ export function ContactForm() {
           <option>Otro</option>
         </select>
       </label>
-      <label className="grid gap-1 text-[11px] uppercase tracking-[0.22em] text-dim">
+      <label className="grid gap-1 text-[11px] font-bold uppercase tracking-[0.18em] text-graphite">
         Mensaje
         <textarea className={FIELD} name="mensaje" rows={4} required placeholder="Cuéntanos de tu proyecto" />
       </label>
@@ -69,12 +69,12 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={status === "sending"}
-            className="bg-corten px-8 py-4 text-[12px] font-medium uppercase tracking-[0.2em] text-obsidian transition-colors duration-500 [transition-timing-function:var(--ease)] hover:bg-limestone disabled:opacity-60"
+            className="bg-orange px-8 py-4 text-[13px] font-bold uppercase tracking-[0.16em] text-ink transition-colors duration-500 [transition-timing-function:var(--ease)] hover:bg-ink hover:text-white disabled:opacity-60"
           >
             {status === "sending" ? "Enviando…" : "Enviar mensaje"}
           </button>
         </Magnetic>
-        <p id="form-estado" role="status" className="text-sm text-limestone">
+        <p id="form-estado" role="status" className="text-sm font-medium text-ink">
           {status === "ok" && "Mensaje enviado. Te contactaremos pronto."}
           {status === "error" && "No pudimos enviarlo. Inténtalo de nuevo en unos minutos."}
         </p>

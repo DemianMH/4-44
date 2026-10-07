@@ -53,10 +53,10 @@ export const PROJECTS: readonly Project[] = [
 ];
 
 export const PROCESS = [
-  { id: "01", title: "Planeación", body: "Definimos alcance, presupuesto y programa de obra antes de mover la primera piedra." },
-  { id: "02", title: "Diseño", body: "Proyecto arquitectónico y técnico con criterios de comodidad, seguridad y plusvalía." },
-  { id: "03", title: "Construcción", body: "Ejecución con supervisión continua y control de calidad en cada etapa." },
-  { id: "04", title: "Entrega", body: "Revisión final, documentación y acompañamiento posterior a la entrega." },
+  { id: "01", title: "Planeación y cimentación", body: "Definimos alcance, presupuesto y programa de obra, y empezamos por una base sólida." },
+  { id: "02", title: "Estructura", body: "Levantamos la estructura con supervisión continua y control de calidad en cada nivel." },
+  { id: "03", title: "Muros e instalaciones", body: "Cerramos espacios y resolvemos instalaciones pensando en confort y seguridad." },
+  { id: "04", title: "Acabados y entrega", body: "Revisión final, detalles y entrega del inmueble listo para habitarse o invertirse." },
 ] as const;
 
 export const FAQ = [

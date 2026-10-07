@@ -2,12 +2,14 @@
 
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
+import { CountUp } from "./CountUp";
 import { Magnetic } from "./Magnetic";
+import { Marquee } from "./Marquee";
 
 const Scene = dynamic(() => import("./Scene"), { ssr: false });
 
 const EASE = [0.16, 1, 0.3, 1] as const;
-const T0 = 2.7; // el hero entra mientras el preloader se retira
+const T0 = 2.9; // el hero entra mientras el preloader se retira
 
 const rise = (i: number) => ({
   initial: { opacity: 0, y: 40 },
@@ -15,46 +17,39 @@ const rise = (i: number) => ({
   transition: { duration: 1.2, delay: T0 + 0.5 + i * 0.12, ease: EASE },
 });
 
-const DATA = [
-  ["Ubicación", "Guadalajara, MX"],
-  ["Líneas", "04"],
-  ["Proyectos", "08+"],
-  ["Coord.", "20.6597° N"],
-];
-
 const WORDS = ["Construimos", "lo que", "permanece."];
+
+const STATS = [
+  { to: 8, label: "Proyectos" },
+  { to: 4, label: "Líneas de servicio" },
+  { to: 4, label: "Modalidades de renta" },
+];
 
 export function Hero() {
   return (
-    <section id="top" className="relative min-h-svh overflow-hidden bg-concrete">
+    <section id="top" className="relative overflow-hidden bg-paper">
+      <div className="bg-blueprint absolute inset-0" aria-hidden />
       <div className="absolute inset-0" aria-hidden>
         <Scene />
       </div>
-      {/* Overlays de legibilidad: degradado lateral y de base */}
+      {/* Overlay de legibilidad: el texto siempre va sobre blanco casi sólido */}
+      <div aria-hidden className="absolute inset-0 bg-white/80 md:hidden" />
       <div
         aria-hidden
-        className="absolute inset-0 bg-[linear-gradient(90deg,rgba(23,24,26,0.92)_0%,rgba(23,24,26,0.78)_38%,rgba(23,24,26,0.15)_80%)]"
+        className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.96)_0%,rgba(255,255,255,0.88)_40%,rgba(255,255,255,0)_78%)]"
       />
-      <div aria-hidden className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-obsidian to-transparent" />
 
-      {/* Líneas guía 1px, rejilla asimétrica 4 / 44 */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 mx-auto max-w-[1600px]">
-        <span className="absolute inset-y-0 left-[4%] w-px bg-[var(--line)]" />
-        <span className="absolute inset-y-0 left-[44%] w-px bg-[var(--line)]" />
-        <span className="absolute inset-x-0 top-[44%] h-px bg-[var(--line)]" />
-      </div>
-
-      <div className="relative mx-auto grid min-h-svh max-w-[1600px] grid-cols-12 gap-x-4 px-5 pb-12 pt-32 md:px-10">
-        <div className="col-span-12 flex flex-col justify-end md:col-span-9 lg:col-span-8">
-          <motion.p {...rise(0)} className="mb-8 flex items-center gap-4 text-[11px] uppercase tracking-[0.3em] text-corten">
-            <span className="h-px w-12 bg-corten" /> 4:44 / Desarrollo y construcción
+      <div className="relative mx-auto grid min-h-svh max-w-[1600px] grid-cols-12 gap-x-4 px-5 pb-10 pt-32 md:px-10">
+        <div className="col-span-12 flex flex-col justify-center md:col-span-8 lg:col-span-7">
+          <motion.p {...rise(0)} className="mb-8 flex items-center gap-4 text-[12px] font-bold uppercase tracking-[0.24em] text-orange-ink">
+            <span className="h-0.5 w-12 bg-orange" /> Desarrollo y construcción · Guadalajara
           </motion.p>
 
-          <h1 className="font-display text-[clamp(2rem,6.4vw,6.5rem)] font-black leading-[0.92] tracking-[-0.045em] text-limestone">
+          <h1 className="font-display text-[clamp(2.4rem,6.6vw,6.6rem)] font-extrabold leading-[0.96] tracking-[-0.035em] text-ink">
             {WORDS.map((w, i) => (
-              <span key={w} className="block overflow-hidden pb-[0.08em]">
+              <span key={w} className="block overflow-hidden pb-[0.1em]">
                 <motion.span
-                  className={`block ${i === 2 ? "text-corten" : ""}`}
+                  className={`block ${i === 2 ? "text-orange-strong" : ""}`}
                   initial={{ y: "110%" }}
                   animate={{ y: 0 }}
                   transition={{ duration: 1.3, delay: T0 + 0.4 + i * 0.14, ease: EASE }}
@@ -66,15 +61,30 @@ export function Hero() {
             <span className="sr-only"> Constructora 4:44, desarrollo y construcción de inmuebles en Guadalajara</span>
           </h1>
 
-          <motion.p {...rise(4)} className="mt-10 max-w-[44ch] text-[15px] leading-relaxed text-dim md:ml-[10%]">
+          {/* Cota de plano animada */}
+          <motion.div
+            aria-hidden
+            className="mt-8 flex max-w-md origin-left items-center text-[10px] font-semibold uppercase tracking-[0.2em] text-graphite"
+            initial={{ scaleX: 0, opacity: 0 }}
+            animate={{ scaleX: 1, opacity: 1 }}
+            transition={{ duration: 1.4, delay: T0 + 1, ease: EASE }}
+          >
+            <span className="h-3 w-px bg-graphite" />
+            <span className="h-px flex-1 bg-graphite" />
+            <span className="px-3">4:44</span>
+            <span className="h-px flex-1 bg-graphite" />
+            <span className="h-3 w-px bg-graphite" />
+          </motion.div>
+
+          <motion.p {...rise(4)} className="mt-8 max-w-[46ch] text-base leading-relaxed text-graphite">
             Casas, edificios y proyectos de inversión en Guadalajara. Diseño con rigor técnico, obra supervisada y maquinaria propia.
           </motion.p>
 
-          <motion.div {...rise(5)} className="mt-10 flex flex-wrap items-center gap-4 md:ml-[10%]">
+          <motion.div {...rise(5)} className="mt-8 flex flex-wrap items-center gap-4">
             <Magnetic>
               <a
                 href="#proyectos"
-                className="group inline-flex items-center gap-3 bg-corten px-7 py-4 text-[12px] font-medium uppercase tracking-[0.2em] text-obsidian transition-colors duration-500 [transition-timing-function:var(--ease)] hover:bg-limestone"
+                className="group inline-flex items-center gap-3 bg-orange px-8 py-4 text-[13px] font-bold uppercase tracking-[0.16em] text-ink transition-colors duration-500 [transition-timing-function:var(--ease)] hover:bg-ink hover:text-white"
               >
                 Ver proyectos
                 <span aria-hidden className="transition-transform duration-500 [transition-timing-function:var(--ease)] group-hover:translate-x-1">
@@ -85,7 +95,7 @@ export function Hero() {
             <Magnetic>
               <a
                 href="#contacto"
-                className="inline-flex border border-limestone/50 px-7 py-4 text-[12px] font-medium uppercase tracking-[0.2em] text-limestone backdrop-blur-sm transition-colors duration-500 [transition-timing-function:var(--ease)] hover:border-corten hover:text-corten"
+                className="inline-flex border-2 border-ink px-8 py-[14px] text-[13px] font-bold uppercase tracking-[0.16em] text-ink transition-colors duration-500 [transition-timing-function:var(--ease)] hover:bg-ink hover:text-white"
               >
                 Iniciar proyecto
               </a>
@@ -95,16 +105,20 @@ export function Hero() {
 
         <motion.dl
           {...rise(6)}
-          className="col-span-12 mt-16 grid grid-cols-2 gap-px self-end border border-[var(--line)] bg-[var(--line)] backdrop-blur-md md:col-span-4 md:col-start-9 md:mt-0 lg:col-span-3 lg:col-start-10"
+          className="col-span-12 mt-14 grid grid-cols-3 gap-px self-end border border-[var(--line)] bg-[var(--line)] md:col-span-6 md:col-start-1 lg:col-span-5"
         >
-          {DATA.map(([k, v]) => (
-            <div key={k} className="bg-obsidian/70 p-4">
-              <dt className="text-[10px] uppercase tracking-[0.25em] text-dim">{k}</dt>
-              <dd className="mt-1 text-sm text-limestone">{v}</dd>
+          {STATS.map((s) => (
+            <div key={s.label} className="bg-white/90 p-4 backdrop-blur-sm">
+              <dd className="font-display text-3xl font-extrabold text-ink">
+                <CountUp to={s.to} />
+              </dd>
+              <dt className="mt-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-graphite">{s.label}</dt>
             </div>
           ))}
         </motion.dl>
       </div>
+
+      <Marquee />
     </section>
   );
 }

@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import "@fontsource-variable/unbounded";
-import "@fontsource/ibm-plex-mono/400.css";
-import "@fontsource/ibm-plex-mono/500.css";
+import "@fontsource-variable/montserrat";
+import "@fontsource-variable/inter";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
@@ -34,7 +33,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0a0a0b",
+  themeColor: "#ffffff",
   width: "device-width",
   initialScale: 1,
 };
@@ -47,6 +46,8 @@ const jsonLd = {
   url: SITE.url,
   description: SITE.description,
   slogan: SITE.tagline,
+  logo: `${SITE.url}/logo.svg`,
+  image: `${SITE.url}/logo.svg`,
   areaServed: { "@type": "City", name: "Guadalajara" },
   address: { "@type": "PostalAddress", addressLocality: "Guadalajara", addressRegion: "Jalisco", addressCountry: "MX" },
 };
