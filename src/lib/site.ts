@@ -21,7 +21,7 @@ export const SERVICES = [
   {
     id: "03",
     title: "4:44 Maquinaria",
-    body: "Renta por hora, día, semana o mes de retroexcavadoras, plataformas de tijera y articuladas, y servicios de movimiento de tierra.",
+    body: "Renta por hora, día, semana o mes de equipo para obra y servicios de movimiento de tierra.",
   },
   {
     id: "04",
@@ -30,13 +30,54 @@ export const SERVICES = [
   },
 ] as const;
 
-export const PROJECTS = [
-  "Valle de Olmos",
-  "Valle del Volga",
-  "Casa San Isidro",
-  "Casa Zalamea",
-  "Real de Valdepeñas II",
-  "Proyecto Alcazar",
-  "Edificio San Paulo",
-  "Restaurantes Wingman",
+export const MACHINERY = [
+  { name: "Retroexcavadoras", use: "Excavación, zanjeo y carga" },
+  { name: "Plataformas de tijera", use: "Trabajo en altura vertical" },
+  { name: "Plataformas articuladas", use: "Alcance en altura con acceso complejo" },
+  { name: "Movimiento de tierra", use: "Nivelación, corte y relleno" },
+] as const;
+
+export const RENTAL_TERMS = ["Hora", "Día", "Semana", "Mes"] as const;
+
+export type Project = { name: string; type: string; tag: string };
+
+export const PROJECTS: readonly Project[] = [
+  { name: "Valle de Olmos", type: "Crowdfunding", tag: "Inversión colectiva" },
+  { name: "Valle del Volga", type: "Crowdfunding", tag: "Inversión colectiva" },
+  { name: "Casa San Isidro", type: "Residencial", tag: "Casa" },
+  { name: "Casa Zalamea", type: "Residencial", tag: "Casa" },
+  { name: "Real de Valdepeñas II", type: "Desarrollo", tag: "Fraccionamiento" },
+  { name: "Proyecto Alcazar", type: "Desarrollo", tag: "Proyecto" },
+  { name: "Edificio San Paulo", type: "Edificación", tag: "Edificio" },
+  { name: "Restaurantes Wingman", type: "Comercial", tag: "Restaurantes" },
+];
+
+export const PROCESS = [
+  { id: "01", title: "Planeación", body: "Definimos alcance, presupuesto y programa de obra antes de mover la primera piedra." },
+  { id: "02", title: "Diseño", body: "Proyecto arquitectónico y técnico con criterios de comodidad, seguridad y plusvalía." },
+  { id: "03", title: "Construcción", body: "Ejecución con supervisión continua y control de calidad en cada etapa." },
+  { id: "04", title: "Entrega", body: "Revisión final, documentación y acompañamiento posterior a la entrega." },
+] as const;
+
+export const FAQ = [
+  {
+    q: "¿En qué zonas trabaja Constructora 4:44?",
+    a: "Desarrollamos y construimos proyectos en Guadalajara y su zona metropolitana, en Jalisco, México.",
+  },
+  {
+    q: "¿Qué servicios ofrece Constructora 4:44?",
+    a: "Casas residenciales, supervisión de proyectos, renta de maquinaria con 4:44 Maquinaria y proyectos de crowdfunding inmobiliario.",
+  },
+  {
+    q: "¿Cómo funciona la renta de maquinaria?",
+    a: "Rentamos retroexcavadoras, plataformas de tijera y articuladas, además de servicios de movimiento de tierra, por hora, día, semana o mes.",
+  },
+  {
+    q: "¿Qué es el crowdfunding inmobiliario de 4:44?",
+    a: "Es un modelo en el que varias personas invierten en un mismo desarrollo. Proyectos como Valle de Olmos y Valle del Volga se han abierto bajo este esquema.",
+  },
+  {
+    q: "¿Pueden supervisar una obra que ya está en marcha?",
+    a: "Sí. Nuestro servicio de supervisión da seguimiento al avance y verifica el cumplimiento de calidad del proyecto.",
+  },
 ] as const;
