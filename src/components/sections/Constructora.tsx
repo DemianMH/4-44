@@ -3,23 +3,23 @@
 import { useRef } from "react";
 import dynamic from "next/dynamic";
 import { motion, useInView } from "framer-motion";
-import { SERVICES } from "@/lib/site";
+import type { Content } from "@/lib/types";
 import { Reveal } from "../Reveal";
 import { EYEBROW, H2, PAD, WRAP } from "./styles";
 
 const Scene = dynamic(() => import("../Scene"), { ssr: false });
 
-const ICONS: Record<string, string[]> = {
-  "01": ["M6 32L32 10L58 32", "M14 27V56H50V27", "M26 56V40H38V56"],
-  "02": ["M10 42A22 22 0 0 1 54 42", "M5 42H59", "M28 18V30", "M36 18V30", "M24 50H40"],
-  "03": ["M6 50H40V42H6Z", "M10 42V32H26L30 42", "M26 32L46 14L58 28", "M58 28L52 38L46 32"],
-  "04": ["M12 56V12H36V56", "M4 56H60", "M44 56V30H56V56", "M18 22H30", "M18 32H30", "M18 42H30"],
-};
+const ICONS: string[][] = [
+  ["M6 32L32 10L58 32", "M14 27V56H50V27", "M26 56V40H38V56"],
+  ["M12 56H52", "M24 56V10", "M24 10H58", "M24 10L10 20", "M46 10V30", "M42 30H50V36H42Z"],
+  ["M10 42A22 22 0 0 1 54 42", "M5 42H59", "M28 18V30", "M36 18V30", "M24 50H40"],
+  ["M12 56V12H36V56", "M4 56H60", "M44 56V30H56V56", "M18 22H30", "M18 32H30", "M18 42H30"],
+];
 
-function Icon({ id }: { id: string }) {
+function Icon({ index }: { index: number }) {
   return (
     <svg viewBox="0 0 64 64" className="h-12 w-12 shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="square" aria-hidden>
-      {ICONS[id].map((d, i) => (
+      {ICONS[index % ICONS.length].map((d, i) => (
         <motion.path
           key={d}
           d={d}
@@ -33,7 +33,7 @@ function Icon({ id }: { id: string }) {
   );
 }
 
-export function Constructora() {
+export function Constructora({ services }: { services: Content["services"] }) {
   const box = useRef<HTMLDivElement>(null);
   // El 3D solo se monta cuando la sección está por entrar en pantalla (ahorra carga inicial)
   const near = useInView(box, { once: true, margin: "300px" });
@@ -52,10 +52,10 @@ export function Constructora() {
             Obra propia, <span className="text-orange-strong">de cimientos a llaves.</span>
           </h2>
           <ul className="mt-10">
-            {SERVICES.map((s, i) => (
+            {services.map((s, i) => (
               <li key={s.id}>
                 <Reveal delay={i * 0.06} className="flex items-center gap-5 border-t border-[var(--line)] py-5 text-ink">
-                  <Icon id={s.id} />
+                  <Icon index={i} />
                   <div>
                     <h3 className="font-display text-lg font-extrabold">{s.title}</h3>
                     <p className="mt-1 text-sm text-graphite">{s.short}</p>

@@ -1,25 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Image from "next/image";
+import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { R, P } from "@/assets/images";
+import type { Img } from "@/lib/types";
 import { lockScroll } from "@/lib/scroll";
 import { Logo } from "./Logo";
+import { Pic } from "./Pic";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
-const ITEMS = [
-  { id: "desarrollo", label: "Desarrollo", img: R.salaA },
-  { id: "plantas", label: "Plantas", img: R.planoA },
-  { id: "constructora", label: "Constructora", img: R.terrazaB },
-  { id: "maquinaria", label: "Maquinaria", img: P.edificioSanPaulo },
-  { id: "proyectos", label: "Proyectos", img: P.casaSanIsidro },
-  { id: "contacto", label: "Contacto", img: R.fachadaDia },
-] as const;
-
-const DOT_IDS = ["top", ...ITEMS.map((i) => i.id)];
-const DOT_LABELS: Record<string, string> = { top: "Inicio", ...Object.fromEntries(ITEMS.map((i) => [i.id, i.label])) };
+export type ChromeItem = { id: string; label: string; img?: Img; href?: string };
 
 function useActiveSection(ids: readonly string[]) {
   const [active, setActive] = useState(ids[0]);
@@ -54,10 +44,12 @@ function useToneUnderLogo() {
 }
 
 /** Sustituye la barra de navegación: logo flotante sin fondo, botón de menú, menú a pantalla completa y puntos de sección. */
-export function SiteChrome() {
+export function SiteChrome({ items }: { items: ChromeItem[] }) {
   const [open, setOpen] = useState(false);
   const [hover, setHover] = useState(0);
-  const active = useActiveSection(DOT_IDS);
+  const dots = useMemo(() => [{ id: "top", label: "Inicio" }, ...items.filter((i) => !i.href).map((i) => ({ id: i.id, label: i.label }))], [items]);
+  const dotIds = useMemo(() => dots.map((d) => d.id), [dots]);
+  const active = useActiveSection(dotIds);
   const tone = useToneUnderLogo();
   const lightLogo = open || tone === "dark";
 
@@ -81,7 +73,7 @@ export function SiteChrome() {
         transition={{ duration: 1, delay: 3.2, ease: EASE }}
       >
         <a href="#top" aria-label="Constructora 4:44, inicio" onClick={() => setOpen(false)} className="relative block">
-          <Logo height={34} className={`transition-opacity duration-500 ${lightLogo ? "opacity-0" : "opacity-100"}`} />
+          <Logo height={34} className={`transition-opacity duration-500 [filter:drop-shadow(0_0_10px_rgba(255,255,255,0.9))] ${lightLogo ? "opacity-0" : "opacity-100"}`} />
           <Logo
             variant="claro"
             height={34}
@@ -118,11 +110,11 @@ export function SiteChrome() {
 
       {/* Puntos de sección */}
       <nav aria-label="Secciones" className="fixed right-5 top-1/2 z-30 hidden -translate-y-1/2 flex-col gap-3 lg:flex">
-        {DOT_IDS.map((id) => (
-          <a key={id} href={`#${id}`} aria-label={DOT_LABELS[id]} aria-current={active === id} className="group relative flex h-4 w-4 items-center justify-center">
+        {dots.map(({ id, label }) => (
+          <a key={id} href={`#${id}`} aria-label={label} aria-current={active === id} className="group relative flex h-4 w-4 items-center justify-center">
             <span className={`block rounded-full ring-1 ring-ink/50 transition-all duration-500 ${active === id ? "h-3 w-3 bg-orange" : "h-1.5 w-1.5 bg-white/80 group-hover:bg-orange"}`} />
             <span className="pointer-events-none absolute right-7 whitespace-nowrap bg-ink px-2 py-1 text-[0.6875rem] font-bold uppercase tracking-[0.18em] text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              {DOT_LABELS[id]}
+              {label}
             </span>
           </a>
         ))}
@@ -143,7 +135,7 @@ export function SiteChrome() {
             transition={{ duration: 0.9, ease: EASE }}
           >
             <ul className="flex min-h-full flex-1 flex-col justify-center px-6 pb-8 pt-24 md:px-16">
-              {ITEMS.map((it, i) => (
+              {items.map((it, i) => (
                 <motion.li
                   key={it.id}
                   initial={{ opacity: 0, y: 40 }}
@@ -151,7 +143,7 @@ export function SiteChrome() {
                   transition={{ duration: 0.9, delay: 0.25 + i * 0.07, ease: EASE }}
                 >
                   <a
-                    href={`#${it.id}`}
+                    href={it.href ?? `#${it.id}`}
                     onClick={() => setOpen(false)}
                     onPointerEnter={() => setHover(i)}
                     onFocus={() => setHover(i)}
@@ -174,7 +166,7 @@ export function SiteChrome() {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.8, ease: EASE }}
                 >
-                  <Image src={ITEMS[hover].img} alt="" fill sizes="42vw" quality={75} className="object-cover" placeholder="blur" />
+                  {items[hover]?.img && <Pic img={items[hover].img} alt="" sizes="42vw" quality={75} className="object-cover" />}
                   <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/20 to-transparent" />
                 </motion.div>
               </AnimatePresence>

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "@fontsource-variable/montserrat";
 import "@fontsource-variable/inter";
 import { SITE } from "@/lib/site";
+import { getContent } from "@/lib/content";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import "./globals.css";
 
@@ -19,7 +20,6 @@ export const metadata: Metadata = {
     "casas en venta Zapopan",
     "desarrollo inmobiliario Guadalajara",
     "construcción de casas Guadalajara",
-    "renta de maquinaria Guadalajara",
     "crowdfunding inmobiliario México",
     "Constructora 444",
   ],
@@ -43,21 +43,25 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": ["GeneralContractor", "RealEstateAgent"],
-  name: SITE.name,
-  alternateName: "Constructora 444",
-  url: SITE.url,
-  description: SITE.description,
-  slogan: SITE.tagline,
-  logo: `${SITE.url}/logo.svg`,
-  image: `${SITE.url}/logo.svg`,
-  areaServed: { "@type": "City", name: "Guadalajara" },
-  address: { "@type": "PostalAddress", addressLocality: "Guadalajara", addressRegion: "Jalisco", addressCountry: "MX" },
-};
-
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  const { company } = await getContent();
+  const sameAs = [company.facebook, company.instagram && `https://instagram.com/${company.instagram}`].filter(Boolean);
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": ["GeneralContractor", "RealEstateAgent"],
+    name: SITE.name,
+    alternateName: "Constructora 444",
+    url: SITE.url,
+    logo: `${SITE.url}/logo.svg`,
+    image: `${SITE.url}/logo.svg`,
+    description: SITE.description,
+    slogan: SITE.tagline,
+    ...(company.phone ? { telephone: company.phone } : {}),
+    ...(company.email ? { email: company.email } : {}),
+    ...(sameAs.length ? { sameAs } : {}),
+    areaServed: { "@type": "City", name: "Guadalajara" },
+    address: { "@type": "PostalAddress", addressLocality: "Guadalajara", addressRegion: "Jalisco", addressCountry: "MX" },
+  };
   return (
     <html lang="es-MX" className="antialiased">
       <body>

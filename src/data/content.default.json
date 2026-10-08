@@ -1,0 +1,634 @@
+{
+ "company": {
+  "name": "Constructora 4:44",
+  "tagline": "Desarrollo y construcción de proyectos e inmuebles",
+  "phone": "+52 33 4494 1579",
+  "whatsapp": "523344941579",
+  "email": "",
+  "instagram": "constructora4.44",
+  "facebook": "https://www.facebook.com/Constructora444/",
+  "address": "Guadalajara, Jalisco, México"
+ },
+ "hero": {
+  "eyebrow": "Inmobiliaria y constructora · Guadalajara",
+  "lines": [
+   "Construimos",
+   "lo que",
+   "permanece."
+  ],
+  "projectSlug": "torres-tadeo",
+  "cta1": "Ver proyectos",
+  "cta2": "Cotizar"
+ },
+ "services": [
+  {
+   "id": "s1",
+   "title": "Casas y departamentos",
+   "short": "Inmuebles de diseño contemporáneo en venta."
+  },
+  {
+   "id": "s2",
+   "title": "Desarrollo y construcción",
+   "short": "Proyectos propios y para terceros, de cimientos a llaves."
+  },
+  {
+   "id": "s3",
+   "title": "Supervisión de obra",
+   "short": "Avance y calidad verificados en cada etapa."
+  },
+  {
+   "id": "s4",
+   "title": "Crowdfunding inmobiliario",
+   "short": "Inversión colectiva en proyectos como Valle de Olmos."
+  }
+ ],
+ "projects": [
+  {
+   "id": "p-tadeo",
+   "slug": "torres-tadeo",
+   "published": true,
+   "featured": true,
+   "name": "Torres Tadeo",
+   "status": "Nuevo desarrollo",
+   "kind": "Departamentos",
+   "location": "Guadalajara, Jalisco",
+   "tagline": "Ladrillo, concreto y luz natural.",
+   "summary": "Departamentos de diseño contemporáneo con fachada de ladrillo, balcones con vegetación y terraza en azotea. Modelos de 46 a 62.86 m².",
+   "landingUrl": "",
+   "facts": [
+    {
+     "label": "Modelos",
+     "value": "4"
+    },
+    {
+     "label": "Desde",
+     "value": "46 m²"
+    },
+    {
+     "label": "Terraza",
+     "value": "En azotea"
+    }
+   ],
+   "cover": {
+    "src": "/p/torres-tadeo/fachada-principal.webp",
+    "w": 2560,
+    "h": 1441,
+    "alt": "Fachada de ladrillo de Torres Tadeo al anochecer",
+    "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAgMEBf/EACEQAAIBAgYDAAAAAAAAAAAAAAECAAMRBBMhMTJDYXGB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAwDAQACEQMRAD8AxKNTKprc6Kd4444lGWwfyZF0fYB4t6gFm5f/2Q=="
+   },
+   "gallery": [
+    {
+     "label": "Sala y comedor",
+     "img": {
+      "src": "/p/torres-tadeo/sala-comedor.webp",
+      "w": 2560,
+      "h": 1441,
+      "alt": "Sala con sofá, cuadro grande y comedor con ventanal",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgMF/8QAHxAAAgIABwEAAAAAAAAAAAAAAQMAAhETITIzUXGB/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AMcPGVSgGow+yTgo3PUKdg9gdyWhkf/Z"
+     }
+    },
+    {
+     "label": "Cocina y comedor",
+     "img": {
+      "src": "/p/torres-tadeo/cocina-comedor.webp",
+      "w": 2560,
+      "h": 1432,
+      "alt": "Cocina blanca integral con comedor y televisión",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAQIDBP/EAB4QAAEEAQUAAAAAAAAAAAAAAAIAAQMRBAUSITIz/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AMGNEJQ7zJhSDJHUjcyNVNSiHRHTfUkZH//Z"
+     }
+    },
+    {
+     "label": "Cocina",
+     "img": {
+      "src": "/p/torres-tadeo/cocina.webp",
+      "w": 2560,
+      "h": 1441,
+      "alt": "Cocina con isla de madera, lámparas colgantes y comedor",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAF/8QAIRABAAEDAgcAAAAAAAAAAAAAAQIAAwQREhMhMjRRYXL/xAAUAQEAAAAAAAAAAAAAAAAAAAAD/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/AM61bYSNqp4GmYs4OTLjXNIhyPdBxOsqe4foooWv/9k="
+     }
+    },
+    {
+     "label": "Recámara",
+     "img": {
+      "src": "/p/torres-tadeo/recamara-balcon.webp",
+      "w": 2560,
+      "h": 1441,
+      "alt": "Recámara con cuadros, lámparas colgantes y balcón",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwIE/8QAIBAAAgEEAQUAAAAAAAAAAAAAAQIAAwQRIRITMTRxcv/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDH1MW9JQCOK6IhFBcB9klVzuI3gr6Eiz7VfmEV/9k="
+     }
+    },
+    {
+     "label": "Sala",
+     "img": {
+      "src": "/p/torres-tadeo/sala-a.webp",
+      "w": 2000,
+      "h": 1121,
+      "alt": "Sala con cuadro de arco terracota y mesa de centro",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAQP/xAAeEAACAQUAAwAAAAAAAAAAAAABAgADBBETITEzcf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8ALx0N6WQnWAJPcjVV5nuI3Pqk6fhfsEKv/9k="
+     }
+    },
+    {
+     "label": "Estancia",
+     "img": {
+      "src": "/p/torres-tadeo/sala-b.webp",
+      "w": 2000,
+      "h": 1121,
+      "alt": "Sala con televisión, cocina y comedor al fondo",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAIF/8QAIBAAAQQBBAMAAAAAAAAAAAAAAgABAwQREiIxcTI0Yf/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhEDEQA/AIpWY7BZByjb6yUMpGJAMj687Wxys+t4P0lV/br9qdOP/9k="
+     }
+    },
+    {
+     "label": "Baño",
+     "img": {
+      "src": "/p/torres-tadeo/bano.webp",
+      "w": 1600,
+      "h": 2001,
+      "alt": "Baño con regadera, lavabo y acabados de concreto",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAUABADASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAABBf/EACAQAAEEAgIDAQAAAAAAAAAAAAEAAgMEESESMQUiMkH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAA//EABURAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIRAxEAPwAknjONn0IDTvaPYogNcc/JXQe/mcE96yj3Z2RxuiA2P1TUhcbQXNBGituVoiw5YOu1KQf/2Q=="
+     }
+    }
+   ],
+   "facade": {
+    "title": "De día. De noche.",
+    "day": {
+     "src": "/p/torres-tadeo/fachada-dia.webp",
+     "w": 2400,
+     "h": 1350,
+     "alt": "Fachada de ladrillo de día",
+     "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAgP/xAAfEAABAwMFAAAAAAAAAAAAAAACAAEEAxFRMTNBccH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AMuuTkNQ7sPDsgEso8i4vrnCvI2G7UJfjIP/Z"
+    },
+    "night": {
+     "src": "/p/torres-tadeo/fachada-frontal.webp",
+     "w": 2400,
+     "h": 1350,
+     "alt": "Fachada de ladrillo al atardecer",
+     "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAD/8QAIBAAAgECBwEAAAAAAAAAAAAAAQIAEkEDBAUREzEzcf/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8AMcwyIhdqQLiSag6O/E1W47NoXH8Zkt/kKGr/2Q=="
+    }
+   },
+   "concept": [
+    {
+     "title": "Materialidad atemporal",
+     "img": {
+      "src": "/p/torres-tadeo/materialidad.webp",
+      "w": 1700,
+      "h": 2554,
+      "alt": "Detalle del ladrillo aparente junto al concreto",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABADASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEEAwX/xAAgEAABBAEEAwAAAAAAAAAAAAABAAIDEQQTITFBImFx/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwEC/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIRAxEAPwDhPFX2ll8RfFpOadxSeTGx8TC8kUOkeS7S6hI3Kpk8ogPSEKxmv//Z"
+     }
+    },
+    {
+     "title": "Conectividad cotidiana",
+     "img": {
+      "src": "/p/torres-tadeo/conectividad.webp",
+      "w": 1900,
+      "h": 1425,
+      "alt": "Acceso con celosía de madera, bicicletas y número del edificio",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAMABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwEG/8QAHBAAAgIDAQEAAAAAAAAAAAAAAQIDEQAEQSEx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8AzuwWgYJGaBH3uTZCGFKq+47RrNRce1g7Uaooq8EUr//Z"
+     }
+    },
+    {
+     "title": "Sostenibilidad integrada",
+     "img": {
+      "src": "/p/torres-tadeo/sostenibilidad.webp",
+      "w": 2400,
+      "h": 1351,
+      "alt": "Terraza techada con pérgola, luces cálidas y área de BBQ",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAP/xAAeEAACAgICAwAAAAAAAAAAAAABAgADBBESMTIzQf/EABQBAQAAAAAAAAAAAAAAAAAAAAP/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8AHkOWq2uPwPWwYeux6CSyEj5Gt65G3xMGlf/Z"
+     }
+    }
+   ],
+   "terrace": {
+    "title": "Terraza en azotea.",
+    "subtitle": "Para convivir con vista.",
+    "hero": {
+     "src": "/p/torres-tadeo/terraza-azotea.webp",
+     "w": 2400,
+     "h": 1339,
+     "alt": "Terraza en azotea con pérgola, sillones y sombrilla al atardecer",
+     "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwQF/8QAIBAAAQMCBwAAAAAAAAAAAAAAAQADEQIEEhMxM1Fxgf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAIhMf/aAAwDAQACEQMRAD8AiZuMunCWYHKNy8cpJiIS17B6WS5r4izCsf/Z"
+    },
+    "card": {
+     "src": "/p/torres-tadeo/terraza-comedor.webp",
+     "w": 1900,
+     "h": 1070,
+     "alt": "Comedor al aire libre en la terraza con luces cálidas",
+     "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwIE/8QAHRABAAICAgMAAAAAAAAAAAAAAgADAQQREjEyYf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQAhMf/aAAwDAQACEQMRAD8Aym4o5SpXMqzft1xjAPX5FPrD2fBg7VMv/9k="
+    }
+   },
+   "tour": {
+    "title": "Recorrido virtual",
+    "stops": [
+     {
+      "name": "Modelo 46 m²",
+      "img": {
+       "src": "/p/torres-tadeo/modelo-46.webp",
+       "w": 1600,
+       "h": 2487,
+       "alt": "Planta amueblada del modelo de 46 m²",
+       "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQMA/8QAIxAAAQQBAgcBAAAAAAAAAAAAAQACAxEEIUESExQiMTIzUf/EABUBAQEAAAAAAAAAAAAAAAAAAAED/8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhEDEQA/AC8IluTzTeguklLijPY2YCnDRwRsU/cXNaPxI4mSejm8g7UpVWC4pbAZwURuqQyOBcQ6qvTZSb7lZvzckP/Z"
+      }
+     },
+     {
+      "name": "Modelo 50.63 m² + terraza",
+      "img": {
+       "src": "/p/torres-tadeo/modelo-5063.webp",
+       "w": 1600,
+       "h": 2186,
+       "alt": "Planta amueblada del modelo de 50.63 m² con 21 m² de terraza",
+       "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAWABADASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBAgQF/8QAHxAAAQQCAgMAAAAAAAAAAAAAAQACAxEEMRIjMlFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQP/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDnYkGOQXPOtpWbAwdjHcmnSmHlqrHxMmiLQHHwrSkoz40zg4+leacm20hCQ//Z"
+      }
+     },
+     {
+      "name": "Modelo 60 m²",
+      "img": {
+       "src": "/p/torres-tadeo/modelo-60.webp",
+       "w": 1600,
+       "h": 2404,
+       "alt": "Planta amueblada del modelo de 60 m²",
+       "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAID/8QAHRABAAEFAQEBAAAAAAAAAAAAAQIAAwQSQRFhE//EABUBAQEAAAAAAAAAAAAAAAAAAAAD/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AwxcRnI/RCL35TMyi7tDX2Fs8KYuRJnAlH3lTnQLagB9O1FVFttxs7C7VV3RtrJduFKUH/9k="
+      }
+     },
+     {
+      "name": "Modelo 62.86 m²",
+      "img": {
+       "src": "/p/torres-tadeo/modelo-6286.webp",
+       "w": 1600,
+       "h": 2404,
+       "alt": "Planta amueblada del modelo de 62.86 m²",
+       "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAECBP/EACEQAAEEAQMFAAAAAAAAAAAAAAEAAgMRMQQSEyEiQVFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQP/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDJByNjGbvzhVFG5xe4tsVn0lp5huAmHYrfPxl7YSeM/FFVlgdW7eLDR1CUshBFYdhCEh//2Q=="
+      }
+     },
+     {
+      "name": "Terraza",
+      "img": {
+       "src": "/p/torres-tadeo/plano-terraza.webp",
+       "w": 1800,
+       "h": 1296,
+       "alt": "Planta de la terraza en azotea vista desde arriba",
+       "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAMABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAH/xAAcEAACAwADAQAAAAAAAAAAAAABAgADEQQSIYH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhEDEQA/AJXSA+9iWzchruGVRrGPpMfUB3+Q3MJLMunIg//Z"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "p-santatere",
+   "slug": "santa-tere",
+   "published": true,
+   "featured": true,
+   "name": "Santa Tere",
+   "status": "Nuevo proyecto",
+   "kind": "Casa",
+   "location": "Guadalajara, Jalisco",
+   "tagline": "Una casa con patio-jardín propio.",
+   "summary": "Casa de diseño sobrio con cocina integral, recámaras luminosas y un patio-jardín con área de convivencia.",
+   "landingUrl": "",
+   "facts": [
+    {
+     "label": "Tipo",
+     "value": "Casa"
+    },
+    {
+     "label": "Exterior",
+     "value": "Patio-jardín"
+    }
+   ],
+   "cover": {
+    "src": "/p/santa-tere/fachada.webp",
+    "w": 2560,
+    "h": 1440,
+    "alt": "Fachada de la casa Santa Tere",
+    "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwEE/8QAHRAAAgICAwEAAAAAAAAAAAAAAQIAEQMxBCNxMv/EABQBAQAAAAAAAAAAAAAAAAAAAAH/xAAXEQEBAQEAAAAAAAAAAAAAAAABAAIR/9oADAMBAAIRAxEAPwBcqYcTrZAB2ah9RU2Vu6WTnfS+TMdD2Bpnhf/Z"
+   },
+   "gallery": [
+    {
+     "label": "Sala y comedor",
+     "img": {
+      "src": "/p/santa-tere/sala-comedor.webp",
+      "w": 1800,
+      "h": 1013,
+      "alt": "Sala y comedor con tonos claros y madera",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwEE/8QAHxAAAQMEAwEAAAAAAAAAAAAAAQACAwQREiEzNGGB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABURAQEAAAAAAAAAAAAAAAAAAAAx/9oADAMBAAIRAxEAPwDeSHtynxfvVkEM0cdQQ2zHehSg4PqKp7QQpx//2Q=="
+     }
+    },
+    {
+     "label": "Cocina",
+     "img": {
+      "src": "/p/santa-tere/cocina.webp",
+      "w": 2400,
+      "h": 1350,
+      "alt": "Cocina con barra, taburetes y campana",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAgX/xAAdEAACAgIDAQAAAAAAAAAAAAABAgADBBEhNEFx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABURAQEAAAAAAAAAAAAAAAAAAAAx/9oADAMBAAIRAxEAPwB5GXSbiCVO+DuF7lXGZqlC8+STd2X+yoOmsNKP/9k="
+     }
+    },
+    {
+     "label": "Cocina y comedor",
+     "img": {
+      "src": "/p/santa-tere/cocina-comedor.webp",
+      "w": 2400,
+      "h": 1350,
+      "alt": "Cocina con isla y comedor para ocho personas",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwT/xAAgEAABAwMFAQAAAAAAAAAAAAACAAERAwQyExQhM0GD/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8AOg9u/aDyqCHbnqUQFuJl/EI5Onucfmkiv//Z"
+     }
+    },
+    {
+     "label": "Recámara",
+     "img": {
+      "src": "/p/santa-tere/recamara-1.webp",
+      "w": 2400,
+      "h": 1350,
+      "alt": "Recámara con ventana y ropa de cama en tonos neutros",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAED/8QAHhAAAgEDBQAAAAAAAAAAAAAAAQIAAwRxERIxMkH/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABYRAQEBAAAAAAAAAAAAAAAAAAARIf/aAAwDAQACEQMRAD8Aj1xeBUK6bR7A12Co6AAYm1lw+IO47GJiv//Z"
+     }
+    },
+    {
+     "label": "Recámara principal",
+     "img": {
+      "src": "/p/santa-tere/recamara-2.webp",
+      "w": 2400,
+      "h": 1594,
+      "alt": "Recámara con clóset y espacio para televisión",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAALABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAH/xAAbEAACAgMBAAAAAAAAAAAAAAABAgMRAAQSMf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAVEQEBAAAAAAAAAAAAAAAAAAARAP/aAAwDAQACEQMRAD8ANM/WxRXo3iNacR2zR8N4BkhUNskkWbxG+irErKADfuAi3//Z"
+     }
+    }
+   ],
+   "facade": null,
+   "concept": [
+    {
+     "title": "Fachada",
+     "img": {
+      "src": "/p/santa-tere/fachada-detalle.webp",
+      "w": 1700,
+      "h": 2133,
+      "alt": "Detalle de la fachada con balcones y celosía",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAUABADASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIEAwX/xAAfEAACAgEEAwAAAAAAAAAAAAABAgADIQQREjETQmH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABcRAQEBAQAAAAAAAAAAAAAAAAABEhP/2gAMAwEAAhEDEQA/AJjQScR0pAyexOo9KC/xhQAB2Yi1I7OpUAL7RukHip9S7PaWJz8mfI8GG5yIQk5X/9k="
+     }
+    },
+    {
+     "title": "Patio-jardín",
+     "img": {
+      "src": "/p/santa-tere/jardin-1.webp",
+      "w": 2400,
+      "h": 1350,
+      "alt": "Jardín con área de asador y sillones",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwX/xAAgEAABAwMFAQAAAAAAAAAAAAABAAIEERIxAyI1QVGC/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAwDAQACEQMRAD8AORJkGU4te6ymRiiPRlm4vqdvvaV3DfKnxcJLo//Z"
+     }
+    }
+   ],
+   "terrace": {
+    "title": "Patio-jardín.",
+    "subtitle": "Un respiro dentro de casa.",
+    "hero": {
+     "src": "/p/santa-tere/jardin-2.webp",
+     "w": 2560,
+     "h": 1440,
+     "alt": "Patio-jardín con sombrilla, sillones y vegetación",
+     "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAMF/8QAIRAAAAUCBwAAAAAAAAAAAAAAAAECBBEDBRITIjIzQXH/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AI3u1QlxmQnuBRy6KueMl6ogxgN9phC+RPgQ//9k="
+    },
+    "card": {
+     "src": "/p/santa-tere/jardin-noche.webp",
+     "w": 1900,
+     "h": 1262,
+     "alt": "Patio-jardín iluminado de noche",
+     "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAALABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAEF/8QAHBAAAgICAwAAAAAAAAAAAAAAAQIAEQMxBBIT/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/AMdjjwvY2NiRlZ19CKU6gwSzmzcVldl4ydTUm0f/2Q=="
+    }
+   },
+   "tour": {
+    "title": "Recorrido virtual",
+    "stops": []
+   }
+  },
+  {
+   "id": "p-coronado",
+   "slug": "coronado-869",
+   "published": true,
+   "featured": true,
+   "name": "Coronado 869",
+   "status": "Entrega inmediata",
+   "kind": "Departamentos boutique",
+   "location": "Santa Teresita, Guadalajara",
+   "tagline": "Vive Santa Teresita con todo a la mano.",
+   "summary": "Seis departamentos boutique de 1 y 2 recámaras con terraza central, en una zona consolidada de Guadalajara.",
+   "landingUrl": "https://coronado.constructora444.com/",
+   "facts": [
+    {
+     "label": "Unidades",
+     "value": "6"
+    },
+    {
+     "label": "Desde",
+     "value": "$2.49 M"
+    },
+    {
+     "label": "Superficie",
+     "value": "40–94 m²"
+    }
+   ],
+   "cover": {
+    "src": "/p/coronado-869/fachada.webp",
+    "w": 1600,
+    "h": 1384,
+    "alt": "Fachada de Coronado 869 con ladrillo y balcones",
+    "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFBv/EAB4QAAICAgIDAAAAAAAAAAAAAAECAwQAMREhEhMi/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABYRAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEQMRAD8AJbPhLEkbDf0Mppe9bqkhDBtcZjbsjG3IQxHeO0FnLq4l0OucGVCegVv/2Q=="
+   },
+   "gallery": [
+    {
+     "label": "Fachada",
+     "img": {
+      "src": "/p/coronado-869/fachada-3.webp",
+      "w": 1600,
+      "h": 1384,
+      "alt": "Fachada con ladrillo, balcones y cocheras",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQF/8QAHxAAAgEDBQEAAAAAAAAAAAAAAQMCABETBAUUMUEk/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAwDAQACEQMRAD8ArGv+kqk0AAdk+05o5UVhgMSOwfayX7PNuom3MBc3tRW0MW7JnvQFnht//9k="
+     }
+    },
+    {
+     "label": "Terraza central",
+     "img": {
+      "src": "/p/coronado-869/terraza.webp",
+      "w": 1600,
+      "h": 1420,
+      "alt": "Terraza central con sombrillas y mesa de convivencia",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAX/xAAfEAACAgIBBQAAAAAAAAAAAAABAgMRAAQhIjFBUaH/xAAVAQEBAAAAAAAAAAAAAAAAAAACA//EABYRAQEBAAAAAAAAAAAAAAAAAAABUf/aAAwDAQACEQMRAD8ArLsIpq794LblJhlSBS5bgAeMpy6WvHKJAnV8wTALvChV98ldN//Z"
+     }
+    },
+    {
+     "label": "Patio",
+     "img": {
+      "src": "/p/coronado-869/patio.webp",
+      "w": 1600,
+      "h": 1384,
+      "alt": "Patio central visto desde arriba",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAOABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwEE/8QAHBAAAgMBAAMAAAAAAAAAAAAAAQIAAxEEEyIy/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgP/xAAWEQEBAQAAAAAAAAAAAAAAAAARAAH/2gAMAwEAAhEDEQA/AN168/VUnlGvmS0KldISv5ELhpN1JLNhC6IaW+5Ubsimkr//2Q=="
+     }
+    },
+    {
+     "label": "Modelo Austro",
+     "img": {
+      "src": "/p/coronado-869/austro.webp",
+      "w": 1600,
+      "h": 1222,
+      "alt": "Interior del modelo Austro con puertas de madera",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAMABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAQME/8QAHxAAAgICAQUAAAAAAAAAAAAAAQIAAwQTERIhMUFR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwT/xAAWEQEBAQAAAAAAAAAAAAAAAAABACH/2gAMAwEAAhEDEQA/AJYTLdUdrEMD6hZcK7taADv5m7CpRUJCiGRRW56io5+ydcnDb//Z"
+     }
+    },
+    {
+     "label": "Modelo Levante",
+     "img": {
+      "src": "/p/coronado-869/levante.webp",
+      "w": 1600,
+      "h": 1224,
+      "alt": "Cocina blanca del modelo Levante",
+      "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAMABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwX/xAAdEAADAAICAwAAAAAAAAAAAAABAgMABBEhMVFS/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABYRAQEBAAAAAAAAAAAAAAAAAAABMf/aAAwDAQACEQMRAD8Ae+vsXiEBbrx1h1NoxCFCh+veU9uzrQKp4GTd6rlQpYkYKcx//9k="
+     }
+    }
+   ],
+   "facade": null,
+   "concept": [],
+   "terrace": null,
+   "tour": {
+    "title": "Recorrido virtual",
+    "stops": []
+   }
+  }
+ ],
+ "portfolio": [
+  {
+   "id": "e-valle-de-olmos",
+   "name": "Valle de Olmos",
+   "type": "Crowdfunding",
+   "tag": "Inversión colectiva",
+   "img": {
+    "src": "/p/entregados/valle-de-olmos.webp",
+    "w": 1000,
+    "h": 1000,
+    "alt": "Valle de Olmos, Inversión colectiva",
+    "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAQIE/8QAIBAAAgEDBAMAAAAAAAAAAAAAAQIDAAQFERQhMRITMv/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAYEQACAwAAAAAAAAAAAAAAAAAAAQIREv/aAAwDAQACEQMRAD8Aqa2KWabdFdy30RRj4p9w6XEfgCp6GlOcFzj0Q27H18k8dVmxd/PcgmaTUjqm5NhzR//Z"
+   }
+  },
+  {
+   "id": "e-valle-del-volga",
+   "name": "Valle del Volga",
+   "type": "Crowdfunding",
+   "tag": "Inversión colectiva",
+   "img": {
+    "src": "/p/entregados/valle-del-volga.webp",
+    "w": 1200,
+    "h": 1600,
+    "alt": "Valle del Volga, Inversión colectiva",
+    "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAVABADASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAQT/xAAhEAACAgEEAgMAAAAAAAAAAAABAgADEgQRFDEhURMiQf/EABYBAQEBAAAAAAAAAAAAAAAAAAIBA//EABgRAAMBAQAAAAAAAAAAAAAAAAABAiEx/9oADAMBAAIRAxEAPwCqRtVlWuTDoA9zNLyc2fVtWibfVAepNS5WISsufe0UEryf5LGLBvfiWr0ErBurfh0AUqFJ/ZyUHPT3lvJ2hCYPoz//2Q=="
+   }
+  },
+  {
+   "id": "e-casa-san-isidro",
+   "name": "Casa San Isidro",
+   "type": "Casa",
+   "tag": "Casa en Zapopan",
+   "img": {
+    "src": "/p/entregados/casa-san-isidro.webp",
+    "w": 1200,
+    "h": 1200,
+    "alt": "Casa San Isidro, Casa en Zapopan",
+    "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQID/8QAHhAAAgEEAwEAAAAAAAAAAAAAAQMCAAUSIQQRQRP/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/8QAGBEBAAMBAAAAAAAAAAAAAAAAAQACAxH/2gAMAwEAAhEDEQA/AEWqAuAGQJJ2K1fxBGWS/fKP5b5LuJbE7lLrflS25NizH6CmaWGFocn/2Q=="
+   }
+  },
+  {
+   "id": "e-casa-zalamea",
+   "name": "Casa Zalamea",
+   "type": "Casa",
+   "tag": "Casa en Zapopan",
+   "img": {
+    "src": "/p/entregados/casa-zalamea.webp",
+    "w": 1200,
+    "h": 1199,
+    "alt": "Casa Zalamea, Casa en Zapopan",
+    "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAQABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAL/xAAaEAACAwEBAAAAAAAAAAAAAAABAgADBBEx/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABcRAQEBAQAAAAAAAAAAAAAAAAEAEjH/2gAMAwEAAhEDEQA/AF3XlATWR0QVmmxvW9kX5tFlvVRgCIV8mio9cNwRNr2PIX//2Q=="
+   }
+  },
+  {
+   "id": "e-real-de-valdepenas",
+   "name": "Real de Valdepeñas II",
+   "type": "Desarrollo",
+   "tag": "Desarrollo residencial",
+   "img": {
+    "src": "/p/entregados/real-de-valdepenas.webp",
+    "w": 1000,
+    "h": 1333,
+    "alt": "Real de Valdepeñas II, Desarrollo residencial",
+    "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAVABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIFBP/EAB4QAAIDAAIDAQAAAAAAAAAAAAECAAMEESETMkFx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwL/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEVH/2gAMAwEAAhEDEQA/ANdm2wcqG5H7DJYdDspA6km3SwucIOV+RsGu5dagAKG9uolxEV0x0qPQGN4KV78Y5hCER//Z"
+   }
+  },
+  {
+   "id": "e-proyecto-alcazar",
+   "name": "Proyecto Alcazar",
+   "type": "Obra",
+   "tag": "Proyecto en construcción",
+   "img": {
+    "src": "/p/entregados/proyecto-alcazar.webp",
+    "w": 1450,
+    "h": 1000,
+    "alt": "Proyecto Alcazar, Proyecto en construcción",
+    "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAALABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAgMEBf/EAB0QAAICAwADAAAAAAAAAAAAAAECAxEABCESMUH/xAAUAQEAAAAAAAAAAAAAAAAAAAAD/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARAv/aAAwDAQACEQMRAD8Al2Ng+Fx2te7x8GyQkdt87zMtHYkgknDjdhKgs1ivausQGX//2Q=="
+   }
+  },
+  {
+   "id": "e-edificio-san-paulo",
+   "name": "Edificio San Paulo",
+   "type": "Edificio",
+   "tag": "Edificación",
+   "img": {
+    "src": "/p/entregados/edificio-san-paulo.webp",
+    "w": 1450,
+    "h": 1000,
+    "alt": "Edificio San Paulo, Edificación",
+    "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAALABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgMG/8QAIBAAAgIBAwUAAAAAAAAAAAAAAQIABBESITEDBRMUQf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCfS7lousy2DhidjwIh6lnyvZZVbkMv2ZnMeo5G5iF//9k="
+   }
+  },
+  {
+   "id": "e-restaurantes-wingman",
+   "name": "Restaurantes Wingman",
+   "type": "Comercial",
+   "tag": "Restaurantes",
+   "img": {
+    "src": "/p/entregados/restaurantes-wingman.webp",
+    "w": 1450,
+    "h": 1000,
+    "alt": "Restaurantes Wingman, Restaurantes",
+    "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAALABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQME/8QAIBAAAgIBAwUAAAAAAAAAAAAAAQIABBEDBSESMTNBUf/EABQBAQAAAAAAAAAAAAAAAAAAAAL/xAAYEQACAwAAAAAAAAAAAAAAAAAAAQISQf/aAAwDAQACEQMRAD8AN281V8pLdPYTTbuVBpEKmAPkIUlX44zJaxJRhn3A4LR2Z//Z"
+   }
+  }
+ ],
+ "faq": [
+  {
+   "id": "f1",
+   "q": "¿Constructora 4:44 también vende inmuebles?",
+   "a": "Sí. Además de desarrollar y construir proyectos, comercializamos casas y departamentos en la zona metropolitana de Guadalajara."
+  },
+  {
+   "id": "f2",
+   "q": "¿En qué zonas trabaja Constructora 4:44?",
+   "a": "Desarrollamos y construimos proyectos en Guadalajara y su zona metropolitana, en Jalisco, México."
+  },
+  {
+   "id": "f3",
+   "q": "¿Qué es el crowdfunding inmobiliario de 4:44?",
+   "a": "Es un modelo en el que varias personas invierten en un mismo desarrollo. Proyectos como Valle de Olmos y Valle del Volga se han abierto bajo este esquema."
+  },
+  {
+   "id": "f4",
+   "q": "¿Pueden supervisar una obra que ya está en marcha?",
+   "a": "Sí. Nuestro servicio de supervisión da seguimiento al avance y verifica el cumplimiento de calidad del proyecto."
+  }
+ ],
+ "form": {
+  "title": "Tu nuevo hogar empieza aquí.",
+  "interests": [
+   "Casa o departamento",
+   "Supervisión de obra",
+   "Inversión / crowdfunding",
+   "Otro"
+  ],
+  "submitLabel": "Enviar mensaje",
+  "successMessage": "Mensaje enviado. Te contactaremos pronto."
+ }
+}
