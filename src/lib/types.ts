@@ -22,7 +22,7 @@ export type Project = {
   facade: { title: string; day: Img; night: Img } | null;
   concept: { title: string; img: Img }[];
   terrace: { title: string; subtitle: string; hero: Img; card?: Img } | null;
-  tour: { title: string; stops: { name: string; img: Img }[] };
+  tour: { title: string; stops: { name: string; img: Img; model?: string }[] };
 };
 
 export type Company = {

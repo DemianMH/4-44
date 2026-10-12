@@ -1,5 +1,6 @@
 import type { Content, Img, Project } from "./types";
 import { normalize } from "./content";
+import { LAYOUTS } from "./layouts";
 
 type R = Record<string, unknown>;
 const isObj = (v: unknown): v is R => typeof v === "object" && v !== null && !Array.isArray(v);
@@ -67,7 +68,7 @@ function project(v: unknown, used: Set<string>): Project {
       : null,
     tour: {
       title: str(tour.title, 80) || "Recorrido virtual",
-      stops: arr(tour.stops).filter(isObj).slice(0, 30).map((s) => ({ name: str(s.name, 80), img: img(s.img) })),
+      stops: arr(tour.stops).filter(isObj).slice(0, 30).map((s) => ({ name: str(s.name, 80), img: img(s.img), model: typeof s.model === "string" && s.model in LAYOUTS ? s.model : undefined })),
     },
   };
 }

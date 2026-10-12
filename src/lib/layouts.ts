@@ -39,7 +39,6 @@ export type Layout = {
 };
 
 const WOOD = "#7a5638";
-const FABRIC = "#a89a88";
 const MARBLE = "#e6e1d8";
 const WHITE = "#f1eee8";
 const DARK = "#2e2e2e";
@@ -102,7 +101,7 @@ const m5063: Layout = {
     it("cama", "Cama matrimonial", "Recámara con tapete, burós y luz natural.", 0.18, 0.455, 0.28, 0.2, 0.5, "#b8a994", { block: true }),
     it("buro1", "Buró", "Buró con lámpara.", 0.07, 0.345, 0.06, 0.07, 0.5, "#6e5035", { block: true }),
     it("buro2", "Buró", "Buró con lámpara.", 0.07, 0.565, 0.06, 0.07, 0.5, "#6e5035", { block: true }),
-    it("muro-tv", "Muro de TV y vestidor", "Muro que separa la recámara y aloja la televisión.", 0.485, 0.435, 0.06, 0.27, 2.4, "#8b857a", { block: true }),
+    it("muro-tv", "Muro de TV y vestidor", "Muro que separa la recámara y aloja la televisión.", 0.485, 0.435, 0.06, 0.27, 2.4, "#b9b2a6", { block: true }),
     it("comedor", "Comedor", "Mesa para seis personas.", 0.77, 0.49, 0.11, 0.24, 0.75, WOOD, { block: true }),
     chair("silla1", 0.69, 0.45, 0.05), chair("silla2", 0.69, 0.54, 0.05), chair("silla3", 0.85, 0.45, 0.05),
     chair("silla4", 0.85, 0.54, 0.05), chair("silla5", 0.77, 0.36, 0.05), chair("silla6", 0.77, 0.625, 0.05),

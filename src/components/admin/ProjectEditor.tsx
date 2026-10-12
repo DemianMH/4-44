@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { Project } from "@/lib/types";
+import { LAYOUT_OPTIONS } from "@/lib/layouts";
 import { Area, Btn, Card, emptyImg, ImageField, ListEditor, Text, Toggle } from "./ui";
 
 type Props = { project: Project; onChange: (p: Project) => void; onDelete: () => void; onMove: (d: number) => void; first: boolean; last: boolean };
@@ -126,12 +127,21 @@ export function ProjectEditor({ project: p, onChange, onDelete, onMove, first, l
             <ListEditor
               items={p.tour.stops}
               onChange={(v) => set("tour", { ...p.tour, stops: v })}
-              make={() => ({ name: "", img: emptyImg() })}
+              make={() => ({ name: "", img: emptyImg(), model: undefined as string | undefined })}
               addLabel="Agregar parada"
               title={(s) => s.name || "Parada"}
               render={(s, st) => (
                 <div className="grid gap-4">
                   <Text label="Nombre" value={s.name} onChange={(v) => st({ ...s, name: v })} placeholder="Modelo 46 m²" />
+                  <label className="grid gap-1.5">
+                    <span className="text-[0.6875rem] font-bold uppercase tracking-[0.16em] text-graphite">Entorno 3D interactivo</span>
+                    <select className="w-full border border-graphite/30 bg-white px-3 py-2.5 text-sm" value={s.model ?? ""} onChange={(e) => st({ ...s, model: e.target.value || undefined })}>
+                      {LAYOUT_OPTIONS.map((o) => (
+                        <option key={o.id} value={o.id}>{o.label}</option>
+                      ))}
+                    </select>
+                    <span className="text-xs text-graphite/80">Solo para plantas que coincidan con un modelo ya construido. Con «Sin entorno 3D» la parada se ve como imagen.</span>
+                  </label>
                   <ImageField label="Imagen" value={s.img} onChange={(v) => st({ ...s, img: v })} />
                 </div>
               )}

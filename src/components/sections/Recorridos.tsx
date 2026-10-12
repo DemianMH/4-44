@@ -1,17 +1,21 @@
 "use client";
 
 import { useRef, useState } from "react";
+import dynamic from "next/dynamic";
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import type { Project } from "@/lib/types";
+import { LAYOUTS } from "@/lib/layouts";
 import { Pic } from "../Pic";
 import { EYEBROW, H2, PAD, WRAP } from "./styles";
+
+const Entorno3D = dynamic(() => import("../Entorno3D"), { ssr: false });
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 type Stop = Project["tour"]["stops"][number];
 
 /** Imagen del recorrido con perspectiva 3D que responde al cursor. */
-function TiltView({ stop }: { stop: Stop }) {
+function TiltView({ stop, onEnter }: { stop: Stop; onEnter?: () => void }) {
   const ref = useRef<HTMLDivElement>(null);
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
@@ -39,7 +43,22 @@ function TiltView({ stop }: { stop: Stop }) {
         transition={{ duration: 0.9, ease: EASE }}
         className="bg-white p-3 shadow-[0_50px_80px_-40px_rgba(29,32,33,0.55)]"
       >
-        <Pic img={stop.img} fill={false} sizes="(min-width:1024px) 45vw, 92vw" className="h-auto max-h-[68svh] w-auto max-w-full object-contain" />
+        <div className="relative">
+          <Pic img={stop.img} fill={false} sizes="(min-width:1024px) 45vw, 92vw" className="h-auto max-h-[68svh] w-auto max-w-full object-contain" />
+          {onEnter && (
+            <button
+              type="button"
+              onClick={onEnter}
+              className="group absolute inset-x-3 bottom-3 flex items-center justify-between gap-3 bg-ink/90 px-4 py-3 text-left text-white backdrop-blur transition-colors duration-500 hover:bg-orange hover:text-ink"
+            >
+              <span>
+                <span className="block text-[0.6875rem] font-bold uppercase tracking-[0.2em] text-orange group-hover:text-ink">Interactivo 3D</span>
+                <span className="block font-display text-base font-extrabold">Entrar al entorno virtual</span>
+              </span>
+              <span aria-hidden className="text-2xl transition-transform duration-500 group-hover:translate-x-1">→</span>
+            </button>
+          )}
+        </div>
       </motion.div>
     </div>
   );
@@ -57,10 +76,12 @@ export function Recorridos({ projects, single = false, id = "recorridos" }: Reco
   const withTour = projects.filter((p) => p.tour.stops.length > 0);
   const [pi, setPi] = useState(0);
   const [si, setSi] = useState(0);
+  const [open, setOpen] = useState(false);
   if (withTour.length === 0) return null;
 
   const project = withTour[Math.min(pi, withTour.length - 1)];
   const stop = project.tour.stops[Math.min(si, project.tour.stops.length - 1)];
+  const layout = stop.model ? LAYOUTS[stop.model] : undefined;
 
   return (
     <section id={id} data-tone="light" className={`bg-blueprint bg-paper ${PAD}`}>
@@ -121,10 +142,13 @@ export function Recorridos({ projects, single = false, id = "recorridos" }: Reco
 
         <div className="col-span-12 min-h-[55svh] lg:col-span-7" role="tabpanel">
           <AnimatePresence mode="wait">
-            <TiltView key={`${project.id}-${si}`} stop={stop} />
+            <TiltView key={`${project.id}-${si}`} stop={stop} onEnter={layout ? () => setOpen(true) : undefined} />
           </AnimatePresence>
         </div>
       </div>
+      {open && layout && (
+        <Entorno3D layout={layout} planSrc={stop.img.src} planW={stop.img.w} planH={stop.img.h} title={`${project.name} · ${stop.name}`} onClose={() => setOpen(false)} />
+      )}
     </section>
   );
 }

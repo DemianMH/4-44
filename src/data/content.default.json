@@ -226,7 +226,8 @@
        "h": 2487,
        "alt": "Planta amueblada del modelo de 46 m²",
        "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAZABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQMA/8QAIxAAAQQBAgcBAAAAAAAAAAAAAQACAxEEIUESExQiMTIzUf/EABUBAQEAAAAAAAAAAAAAAAAAAAED/8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhEDEQA/AC8IluTzTeguklLijPY2YCnDRwRsU/cXNaPxI4mSejm8g7UpVWC4pbAZwURuqQyOBcQ6qvTZSb7lZvzckP/Z"
-      }
+      },
+      "model": "m46"
      },
      {
       "name": "Modelo 50.63 m² + terraza",
@@ -236,7 +237,8 @@
        "h": 2186,
        "alt": "Planta amueblada del modelo de 50.63 m² con 21 m² de terraza",
        "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAWABADASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAMBAgQF/8QAHxAAAQQCAgMAAAAAAAAAAAAAAQACAxEEMRIjMlFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQP/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDnYkGOQXPOtpWbAwdjHcmnSmHlqrHxMmiLQHHwrSkoz40zg4+leacm20hCQ//Z"
-      }
+      },
+      "model": "m5063"
      },
      {
       "name": "Modelo 60 m²",
@@ -246,7 +248,8 @@
        "h": 2404,
        "alt": "Planta amueblada del modelo de 60 m²",
        "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAID/8QAHRABAAEFAQEBAAAAAAAAAAAAAQIAAwQSQRFhE//EABUBAQEAAAAAAAAAAAAAAAAAAAAD/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AwxcRnI/RCL35TMyi7tDX2Fs8KYuRJnAlH3lTnQLagB9O1FVFttxs7C7VV3RtrJduFKUH/9k="
-      }
+      },
+      "model": "m60"
      },
      {
       "name": "Modelo 62.86 m²",
@@ -256,7 +259,8 @@
        "h": 2404,
        "alt": "Planta amueblada del modelo de 62.86 m²",
        "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAYABADASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAECBP/EACEQAAEEAQMFAAAAAAAAAAAAAAEAAgMRMQQSEyEiQVFh/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQP/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDJByNjGbvzhVFG5xe4tsVn0lp5huAmHYrfPxl7YSeM/FFVlgdW7eLDR1CUshBFYdhCEh//2Q=="
-      }
+      },
+      "model": "m6286"
      },
      {
       "name": "Terraza",
@@ -266,7 +270,8 @@
        "h": 1296,
        "alt": "Planta de la terraza en azotea vista desde arriba",
        "blur": "data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAMABADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABAH/xAAcEAACAwADAQAAAAAAAAAAAAABAgADEQQSIYH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhEDEQA/AJXSA+9iWzchruGVRrGPpMfUB3+Q3MJLMunIg//Z"
-      }
+      },
+      "model": "terraza"
      }
     ]
    }
