@@ -9,6 +9,10 @@ export type StoreName = "cms" | "media" | "leads";
 
 const onNetlify = Boolean(process.env.NETLIFY || process.env.NETLIFY_BLOBS_CONTEXT || process.env.NETLIFY_LOCAL);
 
+/** Evita que una lectura de Blobs que no responde deje colgado el sitio entero. */
+const within = <T,>(p: Promise<T>, ms = 4000): Promise<T> =>
+  Promise.race([p, new Promise<never>((_, rej) => setTimeout(() => rej(new Error("store-timeout")), ms))]);
+
 async function blobs(name: StoreName) {
   const { getStore } = await import("@netlify/blobs");
   return getStore({ name, consistency: "strong" });
@@ -19,7 +23,7 @@ const safe = (key: string) => key.replace(/[^a-zA-Z0-9._-]/g, "_");
 
 export async function getJSON<T>(name: StoreName, key: string): Promise<T | null> {
   try {
-    if (onNetlify) return ((await (await blobs(name)).get(key, { type: "json" })) as T | null) ?? null;
+    if (onNetlify) return ((await within((await blobs(name)).get(key, { type: "json" }))) as T | null) ?? null;
     return JSON.parse(await fs.readFile(path.join(localDir(name), safe(key) + ".json"), "utf8")) as T;
   } catch {
     return null;
