@@ -10,7 +10,7 @@ export type StoreName = "cms" | "media" | "leads";
 const onNetlify = Boolean(process.env.NETLIFY || process.env.NETLIFY_BLOBS_CONTEXT || process.env.NETLIFY_LOCAL);
 
 /** Evita que una lectura de Blobs que no responde deje colgado el sitio entero. */
-const within = <T,>(p: Promise<T>, ms = 4000): Promise<T> =>
+const within = <T,>(p: Promise<T>, ms = 7000): Promise<T> =>
   Promise.race([p, new Promise<never>((_, rej) => setTimeout(() => rej(new Error("store-timeout")), ms))]);
 
 async function blobs(name: StoreName) {
@@ -18,12 +18,25 @@ async function blobs(name: StoreName) {
   return getStore({ name, consistency: "strong" });
 }
 
+/**
+ * En Netlify Blobs, leer una clave que no existe puede quedarse colgado, mientras que `list` responde
+ * al instante. Por eso se comprueba la existencia antes de leer.
+ */
+async function existing(name: StoreName, key: string) {
+  const store = await blobs(name);
+  const { blobs: found } = await within(store.list({ prefix: key }));
+  return found.some((b) => b.key === key) ? store : null;
+}
+
 const localDir = (name: StoreName) => path.join(process.cwd(), ".data", name);
 const safe = (key: string) => key.replace(/[^a-zA-Z0-9._-]/g, "_");
 
 export async function getJSON<T>(name: StoreName, key: string): Promise<T | null> {
   try {
-    if (onNetlify) return ((await within((await blobs(name)).get(key, { type: "json" }))) as T | null) ?? null;
+    if (onNetlify) {
+      const store = await existing(name, key);
+      return store ? (((await within(store.get(key, { type: "json" }))) as T | null) ?? null) : null;
+    }
     return JSON.parse(await fs.readFile(path.join(localDir(name), safe(key) + ".json"), "utf8")) as T;
   } catch {
     return null;
@@ -42,7 +55,8 @@ export async function setJSON(name: StoreName, key: string, value: unknown): Pro
 export async function getBinary(name: StoreName, key: string): Promise<{ data: Buffer; type: string } | null> {
   try {
     if (onNetlify) {
-      const r = await (await blobs(name)).getWithMetadata(key, { type: "arrayBuffer" });
+      const store = await existing(name, key);
+      const r = store ? await within(store.getWithMetadata(key, { type: "arrayBuffer" })) : null;
       if (!r) return null;
       return { data: Buffer.from(r.data), type: String(r.metadata?.type ?? "application/octet-stream") };
     }
